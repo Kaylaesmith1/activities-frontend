@@ -7,6 +7,25 @@
     padding: 5px;
 }
 
-.Active i {
-    color: #2142b2;
+i {
+    color: #c69529;
+    font-size: 1.6rem;
+    padding: 7px;
+    vertical-align: middle;
+  }
+  
+  i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    /* CHANGE HOVER COLOR */
+    color: #8e6713;
+  }
+
+a {
+color: #8e6713;
+transition: color ease-in-out 0.3s;
+}
+
+.Active i, a:active {
+    color: #3a4c72;
 }
