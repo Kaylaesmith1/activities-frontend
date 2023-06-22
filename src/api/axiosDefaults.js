@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://activities-frontend-6f71eff2ee1a.herokuapp.com';
+axios.defaults.baseURL = 'https://activities-backend-api-a2cb7e703660.herokuapp.com/';
 axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
 axios.defaults.withCredentials = true;
 
