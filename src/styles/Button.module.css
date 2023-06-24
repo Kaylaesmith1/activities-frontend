@@ -35,7 +35,9 @@
   .Blue,
   .BlueOutline:hover,
   .Bright:hover {
-    background-color: #2142b2;
+    /* background-color: #2142b2; */
+    background-color: #F4B544;
+    border: 2px solid #c69529;
     color: #ffffff;
   }
   
@@ -43,7 +45,8 @@
   .Blue:hover {
     /* border: 1px solid #2142b2; */
     background-color: #ffffff;
-    color: #2142b2;
+    border: 2px solid #c69529;
+    color: #3a4c72;
   }
   
   .Black,
