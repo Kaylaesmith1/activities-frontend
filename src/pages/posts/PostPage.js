@@ -21,9 +21,7 @@ function PostPage() {
           axiosReq.get(`/posts/${id}`),
         ]);
         setPost({ results: [post] });
-        console.log(post);
       } catch (err) {
-        console.log(err);
       }
     };
 
