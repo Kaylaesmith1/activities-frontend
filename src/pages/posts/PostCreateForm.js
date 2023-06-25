@@ -142,7 +142,7 @@ function PostCreateForm() {
                 >
                   <Asset
                     src={Upload}
-                    message="Click or tap to upload an image"
+                    message="Click to upload your event image here"
                   />
                 </Form.Label>
               )}
