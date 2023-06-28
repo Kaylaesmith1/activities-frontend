@@ -70,3 +70,10 @@
     background-color: #2ed9ff;
     color: #2142b2;
   }
+
+  .Follow {
+    background-color: #87bcde;
+    border: 2px solid #3a4c72;
+    /* KAYCHANGE: MARGIN ONLY IN MOBILE */
+    /* margin-top: 1em; */
+  }
