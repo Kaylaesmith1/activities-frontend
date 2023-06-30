@@ -13,7 +13,7 @@ const PopularProfiles = ({ mobile }) => {
     <Container
       className={`${appStyles.Content} ${
  // KAYCHANGE: REMOVE THE RIGHT HAND SIDE PROFILES, KEEP EVERYTHING CENTERED W FOLLOW BUTTON
-        mobile && "d-lg-none text-center mb-3"
+        mobile && "d-lg-none text-center mt-3 mb-3"
       }`}
     >
       {popularProfiles.results.length ? (
