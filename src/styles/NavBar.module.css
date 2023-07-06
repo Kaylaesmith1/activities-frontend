@@ -8,17 +8,17 @@
 }
 
 i {
-    color: #c69529;
+    color: #B28524;
     font-size: 1.6rem;
     padding: 7px;
     vertical-align: middle;
   }
   
-  i:hover {
+  i:hover, a:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    /* CHANGE HOVER COLOR */
-    color: #8e6713;
+    color: #3a4c72;
+    font-weight: bolder;
   }
 
 a {
@@ -26,6 +26,17 @@ color: #8e6713;
 transition: color ease-in-out 0.3s;
 }
 
-.Active i, a:active {
+
+/* had class a:active too but not sure why? */
+.Active, .Active i {
     color: #3a4c72;
+    font-weight: bolder;
+}
+
+
+/* MEDIA QUERIES: */
+@media screen and (max-width: 993px) {
+  .NavLink{
+    font-size: 13px;
+  }
 }

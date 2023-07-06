@@ -1,7 +1,7 @@
 /* CHANGE THIS FONT FAMILY  and COLORS OF HOVER */
 .App {
     font-family:"Lato", sans-serif;
-    background-color: #f8f8f8;
+    background-color: #fff9e5;;
     min-height: 100vh;
     color: #3a4c72;
   }
@@ -17,9 +17,9 @@
     border: 1px solid #dadadf;
   }
   
-  .FillerImage {
+  .SignInUpImage {
     object-fit: cover;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
   }
   
@@ -33,19 +33,19 @@
     box-sizing: border-box;
   }
   
-  /* a {
-    color: #555555;
+  a {
+    color: red;
     transition: color ease-in-out 0.3s;
-  } */
+  }
   
   a:hover {
     text-decoration: none;
   }
   
-  /* a:hover i {
-    color: #2142b2;
+  a:hover i {
+    color: #3a4c72;
     transition: color ease-in-out 0.3s;
-  } */
+  }
   
   input[type="file"] {
     display: none;

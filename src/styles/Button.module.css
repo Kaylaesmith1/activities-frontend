@@ -1,3 +1,5 @@
+/* REMOVE .BLACKOUTLINE CLASS */
+
 .Button {
     font-size: 0.8rem;
     align-self: center;
@@ -13,18 +15,23 @@
     opacity: 0.8;
     border-color: transparent;
     cursor: pointer;
+    color:#382633;
+    background-color: #E8E7FF;
+    border: 2px solid #382633;
+
   }
   
   .Button:hover:active {
-    background-color: #2142b2 !important;
+    background-color: red;
   }
   
   .Button:active {
-    background-color: #2142b2 !important;
+    background-color: green;
   }
   
   .Button:focus {
-    background-color: #2142b2;
+    background-color: E8E7FF;
+    color: #3A4B72;
   }
   
   .Wide {
@@ -32,15 +39,22 @@
     width: 100%;
   }
   
-  .Blue,
+ /* CLASS .BLUE WAS IN THIS BEFORE */
   .BlueOutline:hover,
-  .Bright:hover {
+  .Bright:hover,
+  .Edit {
     /* background-color: #2142b2; */
-    background-color: #F4B544;
+    /* background-color: #F4B544;
     border: 2px solid #c69529;
-    color: #ffffff;
+    color: #ffffff; */
+    background-color: #E8E7FF;
+    border: 2px solid #8E8DBE;
+    color: #3A4B72;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
   }
   
+  /* IS THIS NECESSARY ANYMORE? ANYTHING W BLUE? */
   .BlueOutline,
   .Blue:hover {
     /* border: 1px solid #2142b2; */
@@ -58,24 +72,32 @@
   }
   
   .Black:hover,
-  .BlackOutline {
+  .BlackOutline,
+  .Unfollow {
     /* background-color: #dadadf;
     color: #242a3d;
     border-color: #242a3d; */
-    background-color: aliceblue;
-    border: 2px solid #242a3d;
-    color: #242a3d;
+    background-color: #E8E7FF;
+    border: 2px solid #382633;
+    color: #3A4B72;
+  }
+
+  .Unfollow:hover,
+  .Edit:hover {
+    background-color: #8E8DBE;
+    color: #E8E7FF;
   }
   
-  .Bright {
+  /* .Bright {
     background-color: #2ed9ff;
     color: #2142b2;
-  }
+  } */
 
   /* USE THIS FOR BUTTON UNFOLLOW TOO */
   .Follow {
-    background-color: #87bcde;
-    border: 2px solid #3a4c72;
+    background-color: #8E8DBE;
+    border: 2px solid #382633;
+    color: white;
     /* KAYCHANGE: MARGIN ONLY IN MOBILE */
     /* margin-top: 1em; */
   }
