@@ -60,7 +60,7 @@ const UserPasswordForm = () => {
             <Form.Group>
               <Form.Label>New password</Form.Label>
               <Form.Control
-                placeholder="new password"
+                placeholder="New password"
                 type="password"
                 value={new_password1}
                 onChange={handleChange}
@@ -75,7 +75,7 @@ const UserPasswordForm = () => {
             <Form.Group>
               <Form.Label>Confirm password</Form.Label>
               <Form.Control
-                placeholder="confirm new password"
+                placeholder="Confirm new password"
                 type="password"
                 value={new_password2}
                 onChange={handleChange}
@@ -87,18 +87,19 @@ const UserPasswordForm = () => {
                 {message}
               </Alert>
             ))}
+             <Button
+              type="submit"
+              className={`${btnStyles.Button} ${btnStyles.Edit}`}
+            >
+              Save
+            </Button>
             <Button
               className={`${btnStyles.Button} ${btnStyles.Edit}`}
               onClick={() => history.goBack()}
             >
               Cancel
             </Button>
-            <Button
-              type="submit"
-              className={`${btnStyles.Button} ${btnStyles.Edit}`}
-            >
-              Save
-            </Button>
+
           </Form>
         </Container>
       </Col>
