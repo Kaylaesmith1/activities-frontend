@@ -106,7 +106,7 @@ const SignUpForm = () => {
             ))}
 
             <Button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.SignInUp}`}
               type="submit"
             >
               Sign up
@@ -121,7 +121,7 @@ const SignUpForm = () => {
 
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signin">
-            Already have an account? <span>Sign in</span>
+            Already have an account?<span> Sign in</span>
           </Link>
         </Container>
       </Col>
