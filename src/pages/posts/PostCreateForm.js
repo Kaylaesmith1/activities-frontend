@@ -72,10 +72,11 @@ function PostCreateForm() {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Title</Form.Label>
+        <Form.Label>Event</Form.Label>
         <Form.Control
           type="text"
           name="title"
+          placeholder="Name of event"
           value={title}
           onChange={handleChange}
         />
@@ -87,11 +88,12 @@ function PostCreateForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>Content</Form.Label>
+        <Form.Label>Event Information</Form.Label>
         <Form.Control
           as="textarea"
           rows={6}
           name="content"
+          placeholder="When & where is this happening?"
           value={content}
           onChange={handleChange}
         />

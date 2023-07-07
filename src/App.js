@@ -12,6 +12,9 @@ import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import ProfilePage from "./pages/profiles/ProfilePage";
 
+// import ReviewsPage from './pages/reviews/ReviewsPage';
+
+
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
@@ -29,7 +32,7 @@ function App() {
 
   BackToTop();
   const handleBackToTop = () => {
-    window.scrollTo({ top: 0, behaviour: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
@@ -73,8 +76,9 @@ function App() {
               <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />}/>
               <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />}/>
               <Route exact path="/profiles/:id/edit/" render={() => <ProfileEditForm />}/>
+              {/* <Route exact path="/reviews" render={() => <ReviewsPage />} /> */}
 
-
+              
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
           </Container>

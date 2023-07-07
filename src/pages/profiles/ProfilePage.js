@@ -24,16 +24,10 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
-import BackToTop from "../../hooks/BackToTop";
 
 
 
 function ProfilePage() {
-
-  BackToTop();
-  const handleBackToTop = () => {
-    window.scrollTo({ top: 0, behaviour: 'smooth' });
-  }
 
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profilePosts, setProfilePosts] = useState({ results: [] });
@@ -163,19 +157,6 @@ function ProfilePage() {
         <PopularProfiles />
       </Col>
     </Row>
-
-<div>
-  <Button
-    className={`${btnStyles.Button} ${btnStyles.BackToTop} fixed-bottom-5 left-7 z-50 cursor-pointer`}
-    onClick={handleBackToTop}
-    title="Back to Top"
-    id="scrollBtn"
-  >
-    <i className="fa-solid fa-circle-arrow-up" alt="back to top"></i>
-    <br />
-    <span>Back to Top</span>
-  </Button>
-</div>
 </>
 
   );
