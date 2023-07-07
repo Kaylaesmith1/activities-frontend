@@ -5,7 +5,7 @@ import { useHistory } from "react-router";
 
 
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
-    <i class="fas fa-chevron-circle-down"
+    <i className="fas fa-chevron-circle-down"
     ref={ref}
     onClick={(e) => {
       e.preventDefault();
@@ -28,7 +28,7 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
           onClick={handleEdit}
           aria-label="edit"
         >
-          <i class="fas fa-pencil-alt"></i>
+          <i className="fas fa-pencil-alt"></i>
         </Dropdown.Item>
         <Dropdown.Item
           className={styles.DropdownItem}

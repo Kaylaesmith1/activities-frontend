@@ -34,7 +34,7 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i class="fas fa-map-marked-alt"></i>Create an event
+      <i className="fas fa-map-marked-alt"></i>Create an event
     </NavLink>
   );
   const loggedInIcons = (
