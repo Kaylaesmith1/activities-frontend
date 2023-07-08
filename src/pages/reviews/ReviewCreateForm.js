@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import btnStyles from "../../styles/Button.module.css";
-// import styles from "../../styles/CommentCreateEditForm.module.css";
+
 import { axiosRes } from "../../api/axiosDefaults";
 import { Rating } from "react-simple-star-rating";
 
@@ -16,7 +16,7 @@ function ReviewCreateForm(props) {
     setReviewComments,
     setPosts,
     id,
-    showModal,
+    showPopUp,
     handleCloseCreateForm,
   } = props;
 
@@ -66,7 +66,7 @@ function ReviewCreateForm(props) {
   };
 
   return (
-    <Modal show={showModal} onHide={handleCloseCreateForm}>
+    <Modal show={showPopUp} onHide={handleCloseCreateForm}>
       <Modal.Header closeButton>
         <Modal.Title>Review this activity</Modal.Title>
       </Modal.Header>

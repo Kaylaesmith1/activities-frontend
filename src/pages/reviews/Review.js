@@ -80,7 +80,7 @@ const Review = (props) => {
           </Col>
 
           <Col lg={4}>
-            <Link to={`/events/${id}`}>
+            <Link to={`/posts/${id}`}>
               <span className={`d-inline-column ${styles.Title}`}>
                 {title}
                 <br />
@@ -168,7 +168,7 @@ const Review = (props) => {
       )}
       <ReviewCreateForm
         id={id}
-        showModal={showCreateForm}
+        showPopUp={showCreateForm}
         handleCloseCreateForm={handleCloseCreateForm}
         setPosts={setPosts}
         setReviewComments={setReviewComments}
