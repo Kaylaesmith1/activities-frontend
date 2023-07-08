@@ -20,6 +20,14 @@
     border: 2px solid #382633;
 
   }
+
+  /* SIGN IN & SIGN UP  */
+  .SignInUp {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+  }
   
   /* .Button:hover:active {
     background-color: red;
@@ -97,7 +105,8 @@
   } */
 
   /* USE THIS FOR BUTTON UNFOLLOW TOO */
-  .Follow {
+  .Follow,
+  .Review {
     background-color: #8E8DBE;
     border: 2px solid #382633;
     color: white;
@@ -105,13 +114,35 @@
     /* margin-top: 1em; */
   }
 
-  .SignInUp {
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+/* NUMBER OF REVIEWS BUTTON -- REMOVE PARENTHESIS AND JUST KEEP NUMBER*/
+  .NumReviews {
+    background-color: transparent;
+    border-color: transparent;
+    color: #B28524;
     font-weight: bolder;
-    letter-spacing: 1px;
+/* 
+    background-color: #FFF9E5;
+    border-radius: 20px;
+    color: #B28524;
+    font-weight: bolder;
+    border: 1px solid #B28524; */
+  }
+  
+  .NumReviews:focus {
+    background-color: transparent;
+    color: #B28524;
+    border-color: transparent;
+  }
+  
+  .NumReviews:hover {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 20px;
+    color: #3A4B72;
+    /* border: 2px solid #B28524; */
   }
 
+/* BACK TO TOP BUTTON */
   .BackToTop {
     background-color: transparent;
     padding: 0;

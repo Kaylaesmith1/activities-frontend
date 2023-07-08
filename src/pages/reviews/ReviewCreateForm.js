@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import btnStyles from "../../styles/Button.module.css";
-import styles from "../../styles/CommentCreateEditForm.module.css";
+// import styles from "../../styles/CommentCreateEditForm.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
 import { Rating } from "react-simple-star-rating";
 
@@ -99,7 +99,7 @@ function ReviewCreateForm(props) {
                 </Alert>
               ))}
               <Button
-                className={`${btnStyles.Button} ${styles.Form} btn d-block ml-auto`}
+                className={`${btnStyles.Button} ${btnStyles.Review} btn d-block ml-auto`}
                 type="submit"
               >
                 Post

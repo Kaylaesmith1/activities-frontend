@@ -67,7 +67,7 @@ function ReviewsPage({ message="", filter="" }) {
                 size="sm"
                 type="text"
                 className="mr-sm-2"
-                placeholder="Search reviews"
+                placeholder="Search an activity to review"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
               />
@@ -103,13 +103,7 @@ function ReviewsPage({ message="", filter="" }) {
         <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
       </Col>
-
-
       </Row>
-      <div>
-
-
-      </div>
     </>
   );
 }

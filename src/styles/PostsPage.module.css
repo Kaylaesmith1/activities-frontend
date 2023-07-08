@@ -1,8 +1,8 @@
 .SearchBar input {
     border-radius: 20px;
     color: #242a3d;
-    padding-left: 40px;
     margin-bottom: 16px;
+    padding: 17px 0 20px 40px;
   }
   
   .SearchIcon {
