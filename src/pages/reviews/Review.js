@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
-// import styles from "../../styles/Review.module.css";
 
 
 const Review = (props) => {

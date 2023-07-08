@@ -11,8 +11,7 @@ import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import ProfilePage from "./pages/profiles/ProfilePage";
-
-// import ReviewsPage from './pages/reviews/ReviewsPage';
+import ReviewsPage from './pages/reviews/ReviewsPage';
 
 
 import UsernameForm from "./pages/profiles/UsernameForm";
@@ -76,7 +75,7 @@ function App() {
               <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />}/>
               <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />}/>
               <Route exact path="/profiles/:id/edit/" render={() => <ProfileEditForm />}/>
-              {/* <Route exact path="/reviews" render={() => <ReviewsPage />} /> */}
+              <Route exact path="/reviews" render={() => <ReviewsPage />} />
 
               
               <Route render={() => <p>Page not found!</p>} />

@@ -47,7 +47,7 @@ function ReviewCreateForm(props) {
         ...prevComments,
         results: [data, ...prevComments.results],
       }));
-      setPostss((prevPosts) => ({
+      setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
           return post.id === id
