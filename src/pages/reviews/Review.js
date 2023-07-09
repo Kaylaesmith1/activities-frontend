@@ -8,7 +8,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import Avatar from '../../components/Avatar';
 import { axiosReq } from '../../api/axiosDefaults';
-// import DateFormatter from "../../utils/DateFormatter";
+
 import ReviewCreateForm from './ReviewCreateForm';
 import ReviewComment from './ReviewComment';
 
@@ -29,7 +29,6 @@ const Review = (props) => {
         profile_id,
         profile_image,
         title,
-        // event_date,
         review_id,
         review_count,
         average_rating,
@@ -39,14 +38,14 @@ const Review = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
 
-    // Variables to display Create Review modal popup
+    // CREATE A REVIEW
     const [showCreateForm, setShowCreateForm] = useState(false);
     const handleShowCreateForm = () => {
         setShowCreateForm(true);
     };
     const handleCloseCreateForm = () => setShowCreateForm(false);
 
-    // Variables to toggle open and closed the review comments component
+    // OPEN AND CLOSE REVIEW COMMENTS SECTION
     const [displayReviewComments, setDisplayReviewComments] = useState(false);
     
     const [reviewComments, setReviewComments] = useState({ results: [] });
@@ -56,7 +55,7 @@ const Review = (props) => {
       const handleMount = async () => {
         try {
           const {data: reviewComments} = await (
-            axiosReq.get(`/reviews/?event=${id}`)
+            axiosReq.get(`/reviews/?post=${id}`)
           );
 
           setReviewComments(reviewComments)
@@ -86,10 +85,6 @@ const Review = (props) => {
                 <br />
               </span>
             </Link>
-
-            {/* <span className={`${styles.Date}`}>
-              <DateFormatter event_date={event_date} />
-            </span> */}
           </Col>
 
           <Col lg={4}>
@@ -120,7 +115,7 @@ const Review = (props) => {
               <OverlayTrigger
                 placement="top"
                 overlay={
-                  <Tooltip>You can't review your own event, sorry!</Tooltip>
+                  <Tooltip>You can't review your own activity, sorry!</Tooltip>
                 }
               >
                 <Button className={`${btnStyles.Button} ${btnStyles.Review}`}>
@@ -130,7 +125,7 @@ const Review = (props) => {
             ) : review_id ? (
               <OverlayTrigger
                 placement="top"
-                overlay={<Tooltip>You've already reviewed this event</Tooltip>}
+                overlay={<Tooltip>You've already reviewed this activity</Tooltip>}
               >
                 <Button className={`${btnStyles.Button} ${btnStyles.Review}`}>
                   Post a Review
@@ -156,7 +151,7 @@ const Review = (props) => {
                 {...review}
                 setPosts={setPosts}
                 setReviewComments={setReviewComments}
-                eventId={id}
+                postId={id}
                 review_count={review_count}
                 avgRating={average_rating}
               />
@@ -167,7 +162,7 @@ const Review = (props) => {
         </Container>
       )}
       <ReviewCreateForm
-        id={id}
+        postId={id}
         showPopUp={showCreateForm}
         handleCloseCreateForm={handleCloseCreateForm}
         setPosts={setPosts}
@@ -178,51 +173,3 @@ const Review = (props) => {
 }
 
 export default Review
-
-
-
-
-// import React from "react";
-// import Media from "react-bootstrap/Media";
-// import { Link } from "react-router-dom";
-// import { Rating } from "react-simple-star-rating";
-// import Avatar from "../../components/Avatar";
-// import styles from "../../styles/Comment.module.css";
-
-
-// const Review = (props) => {
-//   const {
-//     profile_id,
-//     profile_image,
-//     owner,
-//     updated_at,
-//     content,
-//     rating,
-
-//   } = props;
-
-//   return (
-//     <>
-//       <hr />
-//       <Media>
-//         <Link to={`/profiles/${profile_id}`}>
-//           <Avatar src={profile_image} height={55} />
-//         </Link>
-//         <Media.Body className="align-self-center ml-2">
-//           <span className={styles.Owner}>{owner}</span>
-//           <span className={styles.Date}>{updated_at}</span>
-//           <p>
-//             Rating:
-//             <Rating readonly initialValue={rating} size={25} />
-//           </p>
-//           <p>
-//             Review:
-//             {content}
-//           </p>
-//         </Media.Body>
-//       </Media>
-//     </>
-//   );
-// };
-
-// export default Review;
