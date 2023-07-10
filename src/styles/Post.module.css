@@ -11,6 +11,8 @@
     margin: 0 0;
   }
   
+
+  /* DO THIS W THE COMMENTS AND RATINGS ICONS TOO */
   .Heart {
     color: #ec1d1d;
 
@@ -22,4 +24,12 @@
   
   .HeartOutline:hover {
     color: #ec1d1d;
+  }
+
+  .CommentOutline:hover {
+    color: #8E8DBE;
+  }
+
+  .StarOutline:hover {
+    color: #F6D64C;
   }
