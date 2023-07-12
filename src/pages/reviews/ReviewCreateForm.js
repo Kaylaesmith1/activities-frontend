@@ -15,7 +15,7 @@ function ReviewCreateForm(props) {
   const {
     setReviewComments,
     setPosts,
-    id,
+    postId,
     showPopUp,
     handleCloseCreateForm,
   } = props;
@@ -38,7 +38,7 @@ function ReviewCreateForm(props) {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("post", id);
+    formData.append("post", postId);
     formData.append("rating", rating);
     formData.append("review", review);
     try {
@@ -50,7 +50,7 @@ function ReviewCreateForm(props) {
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
-          return post.id === id
+          return post.id === postId
             ? { ...post, review_count: post.review_count + 1, average_rating: ((post.average_rating + rating) / post.review_count) }
             : post;
         }),

@@ -30,8 +30,6 @@ const Review = (props) => {
         profile_image,
         title,
         review_id,
-        review_count,
-        average_rating,
         setPosts,
     } = props;
 
@@ -66,6 +64,12 @@ const Review = (props) => {
       handleMount();
     }, [currentUser,id]);
 
+  let averageRating = 0;
+  const reviewCount = reviewComments.results.length;
+  if(reviewCount > 0) {
+    averageRating = reviewComments.results.reduce((acc, ele) => (ele.rating + acc), 0)/reviewCount;
+  }
+
   return (
     <>
       <Container className={`${styles.Review} ${appStyles.Content}`}>
@@ -90,7 +94,7 @@ const Review = (props) => {
           <Col lg={4}>
             <div>
               <span className="mb-3">
-                <Rating readonly initialValue={average_rating} size={25} />
+                <Rating readonly initialValue={averageRating} size={25} />
               </span>
 
               <OverlayTrigger
@@ -104,7 +108,7 @@ const Review = (props) => {
                   }}
                 >
                   <span className={`d-inline-column ${styles.Title}`}>
-                    ({review_count})
+                    ({reviewCount})
                   </span>
                 </Button>
               </OverlayTrigger>
@@ -144,7 +148,7 @@ const Review = (props) => {
       </Container>
       {displayReviewComments && (
         <Container className={`${appStyles.Content} mb-3`}>
-          {reviewComments.results.length ? (
+          {reviewCount ? (
             reviewComments.results.map((review) => (
               <ReviewComment
                 key={review.id}
@@ -152,8 +156,8 @@ const Review = (props) => {
                 setPosts={setPosts}
                 setReviewComments={setReviewComments}
                 postId={id}
-                review_count={review_count}
-                avgRating={average_rating}
+                review_count={reviewCount}
+                avgRating={averageRating}
               />
             ))
           ) : (

@@ -59,10 +59,8 @@ const ReviewComment = (props) => {
       await axiosRes.delete(`/reviews/${id}/`)
       setPosts((prevPosts) => ({
         ...prevPosts,
-        results: prevPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, review_count: post.review_count + 1, average_rating: ((post.average_rating + rating) / post.review_count) }
-            : post;
+        results: prevPosts.results.filter((post) => {
+          return post.id !== id
         }),
       }));
 
@@ -82,7 +80,7 @@ const ReviewComment = (props) => {
             <Avatar src={profile_image} height={45} />
           </Link>
           <Media.Body>
-            <span className={styles.Username}>{owner}</span>
+            <span className={styles.Username}>{owner} </span>
             <span className={styles.Date}>{updated_at}</span>
             <p className={styles.Comment}>{review}</p>
             <p>

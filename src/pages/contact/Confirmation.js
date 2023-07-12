@@ -16,7 +16,7 @@ const Confirmation = () => {
       <Col>
         <Container className={`${appStyles.Thanks} p-4 `}>
           <h1 className={styles.Header}>Thank you!</h1>
-          <p className={styles.Content}>We've received your message and will get back to you soon!</p>    
+          <p className={styles.Content}>We've received your message and DSM_Official will get back to you soon!</p>    
         </Container>
       </Col>
     </Row>

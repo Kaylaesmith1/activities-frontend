@@ -64,13 +64,13 @@ const NavBar = () => {
         <i className="fa-solid fa-envelope-circle-check"></i>Contact DSM
     </NavLink>
 
-      {/* <NavLink
+      <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/reviews"
       >
         <i className="fas fa-star"></i>Reviews
-      </NavLink> */}
+      </NavLink>
 
 
 
