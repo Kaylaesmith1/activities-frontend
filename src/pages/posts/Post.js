@@ -85,6 +85,7 @@ const Post = (props) => {
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
                  />}
+
           </div>
         </Media>
       </Card.Body>
@@ -124,10 +125,6 @@ const Post = (props) => {
             <i className={`far fa-comments ${styles.CommentOutline}`}/>
           </Link>
           {comments_count}
-        {/* </div> */}
-        <Link to={`/posts/${id}`}>
-            <i className={`far fa-star ${styles.StarOutline}`} />
-          </Link>
           </div>
       </Card.Body>
     </Card>

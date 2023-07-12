@@ -9,6 +9,12 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import Avatar from '../../components/Avatar';
 import { axiosReq } from '../../api/axiosDefaults';
 
+// FOR DELETE MODAL 
+// import { axiosRes } from "../../api/axiosDefaults";
+// import { MoreDropdown } from "../../components/MoreDropdown";
+// import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
+
 import ReviewCreateForm from './ReviewCreateForm';
 import ReviewComment from './ReviewComment';
 
@@ -35,6 +41,10 @@ const Review = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+
+    // FOR DELETE MODAL
+    // const history = useHistory();
+
 
     // CREATE A REVIEW
     const [showCreateForm, setShowCreateForm] = useState(false);
@@ -69,6 +79,15 @@ const Review = (props) => {
   if(reviewCount > 0) {
     averageRating = reviewComments.results.reduce((acc, ele) => (ele.rating + acc), 0)/reviewCount;
   }
+
+// DELETE REVIEW
+  // const handleDelete = async () => {
+  //   try {
+  //     await axiosRes.delete(`/reviews/${id}/`);
+  //     history.goBack();
+  //   } catch (err) {
+  //   }
+  // };
 
   return (
     <>

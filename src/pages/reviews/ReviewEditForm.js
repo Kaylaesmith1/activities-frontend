@@ -10,7 +10,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import { axiosReq } from "../../api/axiosDefaults";
 import btnStyles from "../../styles/Button.module.css";
-import styles from "../../styles/CommentCreateEditForm.module.css";
 import { Rating } from "react-simple-star-rating";
 
 function ReviewEditForm(props) {
@@ -115,11 +114,11 @@ function ReviewEditForm(props) {
         </Alert>
       ))}
 
-      <Button className={`${btnStyles.Button} ${styles.Form}`} type="submit">
+      <Button className={`${btnStyles.Button} ${btnStyles.Review}`} type="submit">
         Save
       </Button>
       <Button
-        className={`${btnStyles.Button} ${styles.Form}`}
+        className={`${btnStyles.Button} ${btnStyles.Review}`}
         onClick={handleCloseEditModal}
       >
         Cancel
@@ -143,6 +142,7 @@ function ReviewEditForm(props) {
         </Row>
       </Modal.Body>
     </Modal>
+
   );
 }
 
