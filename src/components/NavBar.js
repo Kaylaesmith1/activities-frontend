@@ -57,15 +57,20 @@ const NavBar = () => {
       </NavLink>
 
       <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/contact/"
+      >
+        <i className="fa-solid fa-envelope-circle-check"></i>Contact DSM
+    </NavLink>
+
+      {/* <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/reviews"
-        // onClick={() => {
-        //   setToggleNavBar(!toggleNavBar);
-        // }}
       >
         <i className="fas fa-star"></i>Reviews
-      </NavLink>
+      </NavLink> */}
 
 
 

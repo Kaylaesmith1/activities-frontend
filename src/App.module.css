@@ -17,6 +17,13 @@
     border: 1px solid #dadadf;
     margin-bottom: 12px;
   }
+
+  .Thanks {
+    background-color: #E8E7FF;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #382633;
+  }
   
   .SignInUpImage {
     object-fit: cover;

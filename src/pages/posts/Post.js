@@ -100,7 +100,7 @@ const Post = (props) => {
               placement="top"
               overlay={<Tooltip>You can't like your own post!</Tooltip>}
             >
-              <i className={`far fa-heart ${styles.HeartOutline}`}/>
+              <i className="far fa-heart"/>
             </OverlayTrigger>
           ) : like_id ? (
             <span onClick={handleUnlike}>
@@ -121,7 +121,7 @@ const Post = (props) => {
           )}
           {likes_count}
           <Link to={`/posts/${id}`}>
-            <i className={`far fa-comments ${styles.CommentOutline}`} />
+            <i className={`far fa-comments ${styles.CommentOutline}`}/>
           </Link>
           {comments_count}
         {/* </div> */}

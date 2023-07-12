@@ -11,7 +11,12 @@ import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import ProfilePage from "./pages/profiles/ProfilePage";
+
+// REMOVE REVIEWS THINGS
 import ReviewsPage from './pages/reviews/ReviewsPage';
+
+import ContactForm from './pages/contact/ContactForm';
+import Confirmation from './pages/contact/Confirmation';
 
 
 import UsernameForm from "./pages/profiles/UsernameForm";
@@ -76,6 +81,8 @@ function App() {
               <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />}/>
               <Route exact path="/profiles/:id/edit/" render={() => <ProfileEditForm />}/>
               <Route exact path="/reviews" render={() => <ReviewsPage />} />
+              <Route exact path="/contact" render={() => <ContactForm />} />
+              <Route exact path="/confirmation" render={() => <Confirmation />} />
 
               
               <Route render={() => <p>Page not found!</p>} />

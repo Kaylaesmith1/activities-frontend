@@ -22,14 +22,17 @@
     color: #e49999;
   }
   
+  .HeartOutline,
   .HeartOutline:hover {
     color: #ec1d1d;
   }
 
+  .CommentOutline,
   .CommentOutline:hover {
     color: #8E8DBE;
   }
 
+  .StarOutline,
   .StarOutline:hover {
     color: #F6D64C;
   }
