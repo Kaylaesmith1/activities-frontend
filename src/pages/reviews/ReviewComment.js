@@ -14,8 +14,8 @@ const ReviewComment = (props) => {
 
   const { 
     profile_id,
+    owner,
     profile_image,
-    owner, 
     updated_at,
     review,
     rating,
@@ -23,7 +23,7 @@ const ReviewComment = (props) => {
     setPosts,
     setReviewComments,
   } = props;
-      
+   
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
@@ -66,7 +66,7 @@ const ReviewComment = (props) => {
     } catch (err) {
       
     }
-  }
+    }
 
   return (
     <div>

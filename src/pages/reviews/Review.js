@@ -176,6 +176,7 @@ const Review = (props) => {
                 setPosts={setPosts}
                 setReviewComments={setReviewComments}
                 postId={id}
+                // profile_image={profile_image}
                 review_count={reviewCount}
                 avgRating={averageRating}
               />

@@ -41,7 +41,6 @@ const ContactForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(contactData)
     try {
       await axiosReq.post("/contact/", contactData);
       history.push("/confirmation");
