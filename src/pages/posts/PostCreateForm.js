@@ -93,7 +93,7 @@ function PostCreateForm() {
           as="textarea"
           rows={6}
           name="content"
-          placeholder="When & where is this happening?"
+          placeholder="Give us some details!"
           value={content}
           onChange={handleChange}
         />

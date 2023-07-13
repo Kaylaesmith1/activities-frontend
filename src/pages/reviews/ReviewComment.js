@@ -1,19 +1,13 @@
 import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-
 import styles from "../../styles/Comment.module.css";
-
 import Avatar from '../../components/Avatar';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { axiosRes } from '../../api/axiosDefaults';
-
 import ConfirmDelete from '../../components/ConfirmDelete';
 import ReviewEditForm from './ReviewEditForm';
-
 import Media from 'react-bootstrap/Media';
-
 import { Rating } from "react-simple-star-rating";
 
 const ReviewComment = (props) => {
@@ -70,6 +64,7 @@ const ReviewComment = (props) => {
     }));
     history.push(`/reviews/`)
     } catch (err) {
+      
     }
   }
 

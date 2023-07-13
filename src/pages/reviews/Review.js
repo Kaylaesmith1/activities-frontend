@@ -74,6 +74,7 @@ const Review = (props) => {
       handleMount();
     }, [currentUser,id]);
 
+  // MENTOR HELP FROM AKSHAT
   let averageRating = 0;
   const reviewCount = reviewComments.results.length;
   if(reviewCount > 0) {
