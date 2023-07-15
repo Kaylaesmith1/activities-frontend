@@ -138,9 +138,7 @@ const Review = (props) => {
             {is_owner ? (
               <OverlayTrigger
                 placement="top"
-                overlay={
-                  <Tooltip>You can't review your own activity, sorry!</Tooltip>
-                }
+                overlay={<Tooltip>Sorry, you can't review your own event.</Tooltip>} 
               >
                 <Button className={`${btnStyles.Button} ${btnStyles.Review}`}>
                   Post a Review
@@ -149,7 +147,8 @@ const Review = (props) => {
             ) : review_id ? (
               <OverlayTrigger
                 placement="top"
-                overlay={<Tooltip>You've already reviewed this activity</Tooltip>}
+                // BUG: OVERLAY NOT DISPLAYING
+                overlay={<Tooltip>You've already reviewed this event</Tooltip>}
               >
                 <Button className={`${btnStyles.Button} ${btnStyles.Review}`}>
                   Post a Review
@@ -176,7 +175,6 @@ const Review = (props) => {
                 setPosts={setPosts}
                 setReviewComments={setReviewComments}
                 postId={id}
-                // profile_image={profile_image}
                 review_count={reviewCount}
                 avgRating={averageRating}
               />
