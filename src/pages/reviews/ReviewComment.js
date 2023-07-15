@@ -5,7 +5,7 @@ import Avatar from '../../components/Avatar';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { axiosRes } from '../../api/axiosDefaults';
-import ConfirmDelete from '../../components/ConfirmDelete';
+// import ConfirmDelete from '../../components/ConfirmDelete';
 import ReviewEditForm from './ReviewEditForm';
 import Media from 'react-bootstrap/Media';
 import { Rating } from "react-simple-star-rating";
@@ -29,15 +29,15 @@ const ReviewComment = (props) => {
   const history = useHistory();
 
 // DELETE REVIEW CONFIRMATION POP UP
-  const [show, setShow] = useState(false);
-  const [message, setMessage] = useState("");
-  const [type, setType] = useState("");
-  const handleShow = () => {
-    setShow(true);
-    setMessage(`Sure you want to delete your review?`);
-    setType("review");
-  };
-  const handleClose = () => setShow(false);
+  // const [setShow] = useState(false);
+  // const [message, setMessage] = useState("");
+  // const [type, setType] = useState("");
+  // const handleShow = () => {
+  //   setShow(true);
+  //   setMessage(`Sure you want to delete your review?`);
+  //   setType("review");
+  // };
+  // const handleClose = () => setShow(false);
 
 // EDIT REVIEW POP UP
   const [showEditModal, setShowEditModal] = useState(false);
@@ -48,7 +48,7 @@ const ReviewComment = (props) => {
     setShowEditModal(false);
   }
   
-  const handleReviewDelete = async () => {
+  const handleDelete = async () => {
     try {
       await axiosRes.delete(`/reviews/${id}/`)
       setPosts((prevPosts) => ({
@@ -85,18 +85,18 @@ const ReviewComment = (props) => {
           {is_owner &&  (
           <MoreDropdown
             handleEdit={handleShowEditModal} 
-            handleShow={handleShow}
+            handleDelete={handleDelete}
           />
           )}
         </Media>
         <hr />
-        <ConfirmDelete
+        {/* <ConfirmDelete
           showPopUp={show}
           handleClose={handleClose}
           handleReviewDelete={handleReviewDelete}
           type={type}
           message={message}
-        />
+        /> */}
         <ReviewEditForm 
           showEditModal={showEditModal}
           handleCloseEditModal={handleCloseEditModal}
