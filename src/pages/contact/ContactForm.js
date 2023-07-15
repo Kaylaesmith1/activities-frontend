@@ -57,7 +57,7 @@ const ContactForm = () => {
           <h1 className={styles.Header}>Contact DSM_Official</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
-              <Form.Label>Name</Form.Label>
+              <Form.Label>First name</Form.Label>
               <Form.Control
                 type="text"
                 name="name"
