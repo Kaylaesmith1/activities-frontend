@@ -147,7 +147,6 @@ const Review = (props) => {
             ) : review_id ? (
               <OverlayTrigger
                 placement="top"
-                // BUG: OVERLAY NOT DISPLAYING
                 overlay={<Tooltip>You've already reviewed this event</Tooltip>}
               >
                 <Button className={`${btnStyles.Button} ${btnStyles.Review}`}>
