@@ -142,7 +142,7 @@
   }
 
 /* BACK TO TOP BUTTON */
-  .BackToTop {
+  /* .BackToTop {
     background-color: transparent;
     padding: 0;
     border-color: transparent;
@@ -170,7 +170,7 @@
     border-color: transparent;
     background-color: transparent;
   
-  }
+  } */
 
   .Delete {
     background-color: red;
