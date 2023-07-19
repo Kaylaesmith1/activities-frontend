@@ -10,8 +10,7 @@ Though it could have a place in a real-world setting, this website was created f
 
 Take a look at the live website [here](https://activities-frontend-6f71eff2ee1a.herokuapp.com/).
 
-![Responsive design](images/mockup.jpg)
-
+![Responsive design](images/amiresponsive.png)
 ## Table of Contents
 
 - [Project](<#project>)
@@ -53,45 +52,47 @@ Take a look at the live website [here](https://activities-frontend-6f71eff2ee1a.
 
 # **Project**
 
-## Objective -- START HERE
+## Objective
 
-<!--The objective of this project is to build a community-based content sharing web application for a small local area allowing users to learn about events happening in the area and to interact with the published content. The platform allows users to view, create, edit, delete, comment and review event postings. The content can be viewed in a logical order,  filtered by category, and searched on by keywords. Users can also follow each other and register their interest in other user's shared content. 
+The objective of this project was to create a web application where people can share information about activities and events happening in the Des Moines, Iowa area. The application could also serve as a way to meet new people within the community, while participating in local events.
+
+Given the various attractions Iowa has to offer, this application not only enables neighbors to participate in specific events, they can also glean information on state parks and other sites of interest that aren't happening at a specific time. Through this platform, users can view a list of events, create their own, edit or delete it and comment on and review other posts. Users can also filter the content through keyword or post author and follow other users.
 
 ## Site User's Goal
 
-There are primarily two types of users who will be interacting with this platform. Users who host events in the local area, and users who attend events in the local area. Of course there will also be some cross over between the two groups for those who post events but also attend them as well.
+People using this application are generally either interested in gaining information about events happening in the area or wanting to post information about an activity. As previously mentioned, however, users will also be able to find non-specific activities like campsite, state parks, nature reserves, etc. This is a platform that can include any type of activity, whether it's a specific planned event or just something 'fun' to check out in Des Moines or in Iowa. 
 
-The event hosts want to share the details of upcoming events with as many members of the local community in one single sharing platform and then gauge two things as a result of the post. Prior to the event happening, the user can see how many people are interested in the event or plan to attend the event. They can also read people's comments regarding the event, and receive messages from interested users who have questions. After the event has taken place, they can read reviews given about the event and see individual ratings and an overall average rating for the event. 
+Once users participate in an activity or travel to a place, they leave a review comment and 0-5 star review. Users can also leave comments on posts for activities and events, 'like' (and 'unlike') activities and follow users they're interested in. Users are unable to review activities, like or leave comments on posts for which they are the author.
 
-All remaining members of the community who are not hosting events, want to find out about all the upcoming events happening in the local area in one single platform. The users can view the full details of each event in an ordered manner, or filter the full list of events based on their personal preferences. Users can show their interest in an event or show they plan to attend. They can write public comments about the event while it is being advertised for others to read, and once the event has taken place they can add a review as well, giving the hosts and other users excellent feedback. If in doubt users can send each other direct messages, or find further contact details within the profile page. 
 
 ## Site Owner's Goal
 
-As the site owner, I saw a problem in the town where I live which I have tried to solve with this platform. I want all members of the local community to be able to find out what is happening in the town in a single dedicated platform. However, not only can they simply see all the event posters listed in one place, they also have the ability to interact with the content, share opinions publicly and contact the event organisers. 
+As the site owner, I was originally interested in a platform I could share with my immediate family for a foreign visitor coming to Iowa this summer. Some in our family aren't on social media, which is the main way people find out about activities and events happening in our community. I wanted to have a list of activities, restaurants, state parks, ice cream parlors, etc as a trove of information so our visitor would be able to take advantage of her time in the state of Iowa as much as possible. 
+
+Once starting the development process of this application, I realized that this platform could be beneficial to users outside my family for the same reasons. As such, I encourage all members of our community to visit the website, attend some of the activities and post their own. Through following other users and interacting with others on the site itself, neighbors can become friends and our small community can continue to grow.
+
+[Back to top](<#table-of-contents>)
 
 ## Project Management
 
 ### Github Project Board
 
-I've been using the project board in GitHub to keep my project together. In the initial design phase, it was really helpful to plan the project as a whole, and create the user stories based on my wireframe designs. I created a Milestone for each main app created in the backend API plus one additional for Navigation and Authentication, in order to maintain a similar structure to the backend [Project Board](https://github.com/users/quiltingcode/projects/5). Each milestone has a list of bullet points for the main desired frontend features. Then, I created a linked User Story for each feature and gave it a level of prioritization using the MoSCoW method and a number of User Story points to indicate the level of difficulty for that feature.
+Before starting the frontend of this project, I thought about EPICs and user stories I wanted to include for a good user experience for visitors to this platform. I started by reviewing what I'd created for the [backend project board](https://github.com/users/Kaylaesmith1/projects/3/views/1) for the backend API, which included various user stories for each app created. Since most features were already covered from the backend, I focused my EPICs on the search, navigation bar and homepage, adding a couple user stories to EPICs for three apps: Following, Profiles, and Comments. 
 
-Later on, during the build, I also used the Project Board to log and track bugs found in my code which could not be fixed immmediately. Where git commits are directly related to a user story, the commit message has been linked to the user story via the hashtag numbering system. 
+Similarly, on the frontend project board, each user story belongs to an EPIC and I prioritized them using the MoSCoW method.
 
-![User Stories](images/user-stories.jpg)
-![Project Board](images/project-board.jpg)
 
-### Database Schema
 
-All the models have been set up in a separate DRF repository. Click [here](https://github.com/quiltingcode/events-backend-api) to view the repository or [here](https://happening-api-kelz.herokuapp.com/) to view the deployed API.
+![User Stories](images/frontend-user-stories.png)
+![Project Board](images/frontend-proj-board.png)
 
- 
 [Back to top](<#table-of-contents>)
 
 # **User Experience (UX)**
 
-## Wireframes
+## Wireframes -- START HERE
 
-The wireframes for the site were created in the software [Balsamiq](https://balsamiq.com). The wireframes have been created principally for desktop devices as this is a browser based platform. However, the wesbite is responsive for tablet and mobile, and I have created additional wireframes to show how the various events pages and profile page adapt to smaller devices. The main grid layout of the components is initially based on the CI Moments walkthrough tutorial as this seems to me the best layout both for wider desktops as for smaller mobile devices for a content sharing platform so I didn't see much reason to change it or find many areas where I could improve on it. Any differences are down to personalised content that fits the project goals.
+<!--The wireframes for the site were created in the software [Balsamiq](https://balsamiq.com). The wireframes have been created principally for desktop devices as this is a browser based platform. However, the wesbite is responsive for tablet and mobile, and I have created additional wireframes to show how the various events pages and profile page adapt to smaller devices. The main grid layout of the components is initially based on the CI Moments walkthrough tutorial as this seems to me the best layout both for wider desktops as for smaller mobile devices for a content sharing platform so I didn't see much reason to change it or find many areas where I could improve on it. Any differences are down to personalised content that fits the project goals.
 
 <details><summary><b>Wireframes</b></summary>
 
