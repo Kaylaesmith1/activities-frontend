@@ -77,7 +77,7 @@ Once starting the development process of this application, I realized that this 
 
 ### Github Project Board
 
-Before starting the frontend of this project, I thought about EPICs and user stories I wanted to include for a good user experience for visitors to this platform. I started by reviewing what I'd created for the [backend project board](https://github.com/users/Kaylaesmith1/projects/3/views/1) for the backend API, which included various user stories for each app created. Since most features were already covered from the backend, I focused my EPICs on the search, navigation bar and homepage, adding a couple user stories to EPICs for three apps: Following, Profiles, and Comments. 
+Before starting the frontend of this project, I thought about EPICs and user stories I wanted to include for a good user experience for visitors to this platform. I started by reviewing what I'd created for the [backend project board](https://github.com/users/Kaylaesmith1/projects/3/views/1) for the backend API, which included various user stories for each app created. Since most features were already covered from the backend, I focused my EPICs on then avigation bar and homepage, adding a couple user stories to EPICs for three apps: Following, Profiles, and Comments. 
 
 Similarly, on the frontend project board, each user story belongs to an EPIC and I prioritized them using the MoSCoW method.
 
@@ -90,92 +90,80 @@ Similarly, on the frontend project board, each user story belongs to an EPIC and
 
 # **User Experience (UX)**
 
-## Wireframes -- START HERE
+## Wireframes
 
-<!--The wireframes for the site were created in the software [Balsamiq](https://balsamiq.com). The wireframes have been created principally for desktop devices as this is a browser based platform. However, the wesbite is responsive for tablet and mobile, and I have created additional wireframes to show how the various events pages and profile page adapt to smaller devices. The main grid layout of the components is initially based on the CI Moments walkthrough tutorial as this seems to me the best layout both for wider desktops as for smaller mobile devices for a content sharing platform so I didn't see much reason to change it or find many areas where I could improve on it. Any differences are down to personalised content that fits the project goals.
+The wireframes for the project were created using [Figma](https://www.figma.com/). Wireframes have been created and included for both desktop and mobile devices. The application itself is responsive for desktop, tablet and mobile-sized devices. 
+
+The layout closely follows the Moments walkthrough project, including a navigation bar with registration and login features, the activities section in the middle as posted events and on the right, on a desktop device, a list of most followed profiles. On smaller devices, the navbar becomes a hamburger menu, the most follow profiles move to the top of the page and the events are underneath. This layout was chosen for ease and because the information translates well through various device sizes. I found this layout easy to navigate from my desktop, laptop and mobile.
 
 <details><summary><b>Wireframes</b></summary>
 
-![Events Page](images/events-page.png)
-![Events Detail Page](images/event-detail.png)
-![Events Page - Mobile](images/events-page-mobile.png)
-![Profile Page](images/profile-page.png)
-![Profile Page - Mobile](images/profile-page-mobile.png)
-![Reviews Page](images/reviews-page.png)
-![Reviews Page - Comments](images/review-comments.png)
+![Home Page](images/wireframe-homepage.png)
+![Create Event Page](images/wireframe-create-event.png)
+![Edit Event Page](images/wireframe-edit-event.png)
+![Contact Page](images/wireframe-contact.png)
+![Reviews Page](images/wireframe-reviews.png)
+![Profile Page](images/wireframe-profile.png)
+![Edit Profile Page](images/wireframe-edit-profile.png)
+![Signin Page](images/wireframe-signin.png)
+![Signup Page](images/wireframe-signup.png)
 
 </details><br/>
 
 ## User Stories
-Here I have listed the main user stories for a user who is not logged in, or has no account and a logged in user. These user stories were then tested and confirmed in the [Testing](<#testing>) section.
+Like with the backend, I used the Kanban project board in GitHub to help guide me through the user stories for the frontend application. creating this API. I used Agile principles again to create 5 EPICs and their subsequent user stories, where each user story belongs to one EPIC. Since most user stories dealing with my 7 separate apps in this project were discussed in the backend README documentation, I'll cover new EPICs here along with their user stories.
 
-### Logged Out Site User
-|  | | |
-|:-------:|:--------|:--------|
-| As a Logged out User | I can log in so that I can interact fully with the site | &check; |
-| As a Logged out User | I can sign up so that I can interact fully with the site | &check; |
-| As a Logged out User | I can see a list of all events so that I can see all events that have been shared to the site | &check; |
-| As a Logged out User | I can view a single event so that I can see single event details| &check; |
-| As a Logged out User | I can view the top upcoming events so that I know which events have the highest going count | &check; |
-| As a Logged out User | I can view the popular profiles so that I can see who has the most followers | &check; |
-| As a Logged out User | I can view the details of an individual profile page so that I can see more profile data | &check; |
-| As a Logged out User | I can filter events by category so that I can view only the events I'm interested in | &check; |
-| As a Logged out User | I can search events by title, profile, date or tag so that I can find one particular event | &check; |
-| As a Logged out User | I can view comments of an event so that I can see what other users think about the event | &check; |
+### EPIC | NavBar
+As the developer I can create a functional navigation bar at the top of my page so that users can easily look at different pages of the site.
 
-### Logged In Site User
-|  | | |
-|:-------:|:--------|:--------|
-| As a Logged in User | I can log in so that I can interact fully with the site | &check; |
-| As a Logged in User | I can log out from the site so that no-one else can interact with the site using my details | &check; |
-EVENTS
-| As a Logged in User | I can see a list of all events so that I can see all events that have been shared to the site | &check;
-| As a Logged in User | I can view a single event so that I can see single event details | &check; |
-| As a Logged in User | I can view the top upcoming events so that I know which events have the highest going count | &check; |
-| As a Logged in User | I can view the feed page so that I can only see events of profiles I follow | &check; |
-| As a Logged in User | I can view the My Events page so that I can see only the events i'm interested in or going to | &check; |
-| As a Logged in User | I can view the details of an individual profile page so that I can see more profile data | &check; |
-| As a Logged in User |  I can see all the events from one profile so that I can view all the events of one profile easily | &check; |
-| As a Logged in User | I can filter events by category so that I can view only the events I'm interested in  | &check; |
-| As a Logged in User | I can search events by title, profile, date or tag so that I can find one particular event | &check; |
-| As a Logged in User | I can create a new event so that I can promote an event in the town| &check; |
-| As a Logged in User | I can edit my events so that I can change the details or correct mistakes | &check; |
-| As a Logged in User | I can delete my own events so that I can remove events from the site | &check; |
-INTERESTED/GOING
-| As a Logged in User | I can add interested to a post so that I can publicly display my interest in an event | &check; |
-| As a Logged in User | I can remove interested to a post so that I can remove interest in an event if i change my mind | &check; |
-| As a Logged in User |  I can add going to an event so that I can publicly show that i plan to attend | &check; |
-| As a Logged in User | I can remove going from an event so that I can remove going to an event if i no longer plan to attend | &check; |
-COMMENTS
-| As a Logged in User | I can view comments of an event so that I can see what other users think about the event | &check; |
-| As a Logged in User | I can create a comment so that I can publicly show my thoughts about an upcoming event | &check; |
-| As a Logged in User | I can edit my comments so that I can correct mistakes | &check; |
-| As a Logged in User | I can delete a comment that I created so that I can remove comments as I see fit | &check; |
-| As a Logged in User | I can delete a comment that I created so that I can remove comments as I see fit | &check; |
-FOLLOW
-| As a Logged in User | I can follow another user so that I can see their events in my feed page | &check; |
-| As a Logged in User | I can unfollow another user so that I can stop seeing their events in my feed page | &check; |
-REVIEWS
-| As a Logged in User | I can view all events that have happened so that I can see their average rating and review count | &check; |
-| As a Logged in User | I can view all the reviews relating to a single event so that I can see other user's opinions of the event | &check; |
-| As a Logged in User | I can post a review on a past event so that I can share my opinion on the event | &check; |
-| As a Logged in User | I can edit my own reviews so that I can correct my comments | &check; |
-| As a Logged in User | I can delete a review that I created so that I can remove reviewsI no longer want published | &check; |
-PROFILES
-| As a Logged in User | I can view the popular profiles so that I can see who has the most followers | &check; |
-| As a Logged in User | I can view the profile page of another user so that I can see more details about that user | &check; |
-| As a Logged in User | I can edit my own profile page so that I can add additional information for other users to see about me | &check; |
-| As a Logged in User | I can change my username and password so that I can change my login details if I feel they are not secure | &check; |
-| As a Logged in User | I can change my username and password so that I can change my login details if I feel they are not secure | &check; |
-CONTACT
-| As a Logged in User | I can view messages in my profile page so that I can read messages other users have sent me | &check; |
-| As a Logged in User | I can send a message to another user so that I can ask a question about an event they are hosting | &check; |
+#### User Stories
+- As a user I can click each navbar icon so that I am redirected to different pages.
+- As a user I can upload a profile picture so that other users can see who my account belongs to.
+
+### EPIC | Homepage
+As the developer I can create a homepage where users can log in / register and see site information so that they know of events occurring.
+
+#### User Stories
+- As a user I can create an account so that I can create and view events and see other users' profiles.
+- As a user I can log into my account so that I can interact fully with the website.
+- As a logged in user I can **see a list of events ** so that I can decide if I'm interested and/or want to attend.
+- As a logged in user I can click a specific event so that I can see the details of that event.
+- As a logged in user I can click the 'create event' button so that I can create an event and add information about it for others to see.
+- As a logged in user I can use the search bar so that I can search for events by keyword.
+- As a logged in user I can view the 'popular profiles' section so that I can see profiles of other users and choose to follow them.
+
+### EPIC | Profile
+As the developer I can create a Profile section so that users can update personal information and images.
+
+#### User Stories
+- As a user I can upload a picture so that other users can see who I am via my profile.
+- As a user I can view others' profiles so that I can see their posts and profile details.
+- As a user I can edit my own profile so that the information always remains updated and correct.
+- As a user I can change my username and password so that these credentials are updated in case of a security issue.
+
+### EPIC | Comments
+As the developer I can create a Comments section so that users can comment on posts and interact with others on the site
+
+#### User Stories
+- As a user I can comment on an event so that others will know my opinion.
+- As a user I can view other comments on an event so that I can see others' opinions on that event.
+- As a user I can edit my own comments so that information is corrected.
+- As a user I can delete my own comments so that any erroneous information from a comment is not on the site.
+
+### EPIC | Following
+As the developer I can create a followers section so that registered, logged in users can follow and unfollow other users.
+
+#### User Stories
+- As a user I can follow another registered user so that I can view their profile on my feed page.
+- As a user I can unfollow another registered user so that their profile information will no longer be visible on my feed page.
+- As the developer I can create follow / unfollow buttons so that registered, logged in users can follow and unfollow other users.
+
 
 [Back to top](<#table-of-contents>)
 
-## Site Structure
+## Site Structure -- START HERE
 
-Happening is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available. 
+<!--Happening is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available. 
 
 ## Design Choices
 
