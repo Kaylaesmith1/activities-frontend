@@ -126,7 +126,7 @@ As the developer I can create a homepage where users can log in / register and s
 #### User Stories
 - As a user I can create an account so that I can create and view events and see other users' profiles.
 - As a user I can log into my account so that I can interact fully with the website.
-- As a logged in user I can **see a list of events ** so that I can decide if I'm interested and/or want to attend.
+- As a logged in user I can see a list of events so that I can decide if I'm interested and/or want to attend.
 - As a logged in user I can click a specific event so that I can see the details of that event.
 - As a logged in user I can click the 'create event' button so that I can create an event and add information about it for others to see.
 - As a logged in user I can use the search bar so that I can search for events by keyword.
@@ -161,9 +161,9 @@ As the developer I can create a followers section so that registered, logged in 
 
 [Back to top](<#table-of-contents>)
 
-## Site Structure
+## Site Structure - FINISH THIS SECTION
 
-Happening is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available. 
+<!-- Happening is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available.  -->
 
 ## Design Choices
 
