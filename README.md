@@ -75,7 +75,7 @@ Once starting the development process of this application, I realized that this 
 
 ## Project Management
 
-### Github Project Board
+### GitHub Project Board
 
 Before starting the frontend of this project, I thought about EPICs and user stories I wanted to include for a good user experience for visitors to this platform. I started by reviewing what I'd created for the [backend project board](https://github.com/users/Kaylaesmith1/projects/3/views/1) for the backend API, which included various user stories for each app created. Since most features were already covered from the backend, I focused my EPICs on then avigation bar and homepage, adding a couple user stories to EPICs for three apps: Following, Profiles, and Comments. 
 
@@ -161,31 +161,34 @@ As the developer I can create a followers section so that registered, logged in 
 
 [Back to top](<#table-of-contents>)
 
-## Site Structure -- START HERE
+## Site Structure
 
-<!--Happening is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available. 
+Happening is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available. 
 
 ## Design Choices
 
 * ### Color Scheme
 
-When deciding on the colour scheme for my site, I looked at other content sharing platforms such as Facebook, Instagram and Eventbrite for inspiration. All of these use a very neutral color scheme with barely any background colour at all, and then just hints of brand color here and there to let the buttons stand out. In order to follow a similar approach, I chose a very neutral background color and then complimentary pink and purple tones for the icons and buttons. 
+When choosing a color palette for this application, I wanted something bright and summery but that had contrasting tones for text. I wanted to have a lighter backgroud color but still have the navitation bar and post sections stand out so as not to take away from the actual content of the site. 
 
-![Colour Palette](images/color-palette.png)
+Though seven colors can seem extensive, the darker colors are only used for some of the text and various icons, while the lighter tones are used for buttons and the rest of the overall layout of the page.
+
+![Color Palette](images/color-scheme.png)
 
 * ### Typography
 
-The main font used for the site is 'Montserrat' with a fallback font of Sans-Serif just in case it doesn't load. This font is nice and clear to read even though the platform in general is not text-heavy. 
+The main fonts used on this site are 'Montserrat' and 'Lato', both with a fallback font of Sans-Serif, should the page not load properly. These fonts are both clear and have good letter spacing on their own, which make them easy to read for most users.
 
-![Typography](images/typography.jpg)
+![Typography Lato](images/typography-lato.png)
+![Typography Montserrat](images/typography-montserrat.png)
 
 [Back to top](<#table-of-contents>)
 
 # **Existing Features**
 
-* ## Navigation
+* ## Navigation -- START HERE
 
-The navigation bar is very clean and straight forward. Depending on whether you are logged in or not, different menus are visible for the site user. For tablet and mobile devices, the navigation bar menu turns into a hamburger dropdown list. 
+<!--The navigation bar is very clean and straight forward. Depending on whether you are logged in or not, different menus are visible for the site user. For tablet and mobile devices, the navigation bar menu turns into a hamburger dropdown list. 
 
 On accessing the site for the first time, the user is logged out and the following menu items are visible:
 
