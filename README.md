@@ -213,6 +213,8 @@ Once logged in, the user will see additional icons and be able to navigate to th
 ![Logged-in Navbar Desktop](images/navbar-desktop-loggedin.png)
 ![Logged-in Navbar Mobile](images/navbar-mobile-loggedin.png)
 
+[Back to top](<#table-of-contents>)
+
 ## Authentication
 
 New visitors to the site or those who didn't previously create an account can click the sign up icon in the navbar to be taken to the sign up page and create an account. They'll be asked to enter in a username, password and confirm the password. I followed the standard dj-rest/auth/registration user account signup that was used in the Moments walkthrough project to implement this feature in my application.
@@ -245,6 +247,8 @@ Activities created through the Iowa Summer Activities platform are all displayed
 
 ![Activities](images/activities.png)
 
+[Back to top](<#table-of-contents>)
+
 ### Most Followed Profiles
 
 The most followed profiles component is visible throughout the website, regardless of login status. If users are logged in, they're able to follow or unfollow other users, via buttons next to the person's profile avatar and username on desktop or laptop devices. Users are unable follow themselves as no button appears next to their avatar. This feature filters users by follower count, from highest to lowest, which is the order the avatar will appear in the list. Clicking the profile avatar will allow you to view that user's full profile.
@@ -261,206 +265,161 @@ If the user is logged in, they can create a post for an activity to share on the
 
 ![Create an Event](images/create-event.png)
 
-### Event Detail Page
+### Event Details Page
 
-<!--In the event details page, this simply shows everything relating to one single event. You can reach this page by clicking on an event image in any of the events pages or on the event title in the Top Upcoming Events component and Reviews page. It also shows the popular profiles component and the Top Upcoming Events component for continuity across the pages. If you are the owner of the event, from this page you have the option to edit or delete the event by clicking on the three dots that appear next to the event posted date. 
+Users can see the details of any event by clicking the event image. They'll be taken to the specific page for that event where they can view and leave comments and like the activity.  
 
-If you select Edit, you are taken back to the event creation form, but the fields are already pre-populated with the existing event information. You can edit the desired fields and save the changes, which will return you to the event detail page and you can see that the event has been updated successfully. 
+If you created the event, you can also edit it from this page by clicking the dropdown arrow next to the date and select the pencil icon to edit the post. This will take you to the creation form that will now have pre-populated fields with the existing information. The user can change what they want (title, description, image), save and the information will be updated, both in the API and on the frontend website. 
 
-![Edit an Event](images/event-edit.jpg)
+![Edit an Event](images/edit-event.png)
 
-If you select Delete, a pop-up message appears asking you if you are sure you want to delete this event. This defensive design component allows the user to cancel out of the deletion process if the button was pressed in error. If however, the user wishes to proceed with the deletion they can click confirm and the event will be removed from all pages and the user redirected back to the previously visited page. 
+If the creator of an event chooses to delete the event, the process is similar in that they will choose the trashcan icon from the dropdown arrow menu on the event's detail page. This action will remove the event from the API and from the frontend and is irreversible.
 
-![Delete an Event](images/event-delete.jpg)
+Under the details of the event itself, there's a comment section that will show other users' comments, if there are any. If not, a message will be displayed.
 
-Below the event details is the comments section. If there are no comments yet, the user will see a message telling them that there are no comments. 
+![Comments - Logged in](images/comments-none.png)
 
-If the user is not logged in, they can read any comments that have been posted but they can't post a comment themselves unless they log in. 
+Logged out or unregistered users can view comments though they won't be able to leave one until they log in. If there are no comments, a similar message will be displayed but the user will not be prompted to leave a comment. They can only do this when they've logged in.
 
-![Comments - not logged in](images/comments-none.jpg)
+![Comments - Not logged in](images/comments-none-logout.png)
 
-Any comments that have been posted about this event are displayed, regardless of login status. If the user logs in they will see a comment form above the existing comments where they can post their own comments about the event for other users to read. 
+All comments posted about an event will be visible to all users, regardless of login status.  comments that have been posted about this event are displayed, regardless of login status. If the user logs in they will see a comment form above the existing comments where they can post their own comment or question about the activity.
 
-![Comments](images/comments.jpg)
+![Comments](images/comments.png)
 
-## Feed -- DONE
+[Back to top](<#table-of-contents>)
+
+
+## Feed
 
 Aesthetically, the feed page is the same as the homepage in the sense that it displays a list of events, the seach bar and the most followed profiles section. The difference here is the feed section only shows events posted by users you follow and therefore, to see this page at all, the user needs to be logged in. If you're not following anyone, a 'no-results' image and message will appear. 
 
 
 ![Feed Page-No Results](images/feed-no-results.png)
 
-## Liked -- START HERE
+## Liked
 
-The My Events page looks identical to the homepage, only the Events Posts component changes. On selecting the My Events menu option in the NavBar, you are shown a dropdown with two additional options. Interested or Going. If you select interested, the events posts component will be filtered to only show the events where the logged in user has clicked the interested button. Alternatively, if the user selects the going option from navbar dropdown, the filter changes to only show events where the logged in user has clicked the going button. 
-
-In the original plan for this project, I wanted the My Events page to be a combination of all the events where the user has selected either interested or going on an event. Initially, I tried to set up the backend API and display both these filters at the same time, but I couldn't join the two filterset fields together. I asked among the slack community and others had achieved adding two filters together with an AND command, but nobody seemed to know how to do an OR command. I consulted my mentor further into the project when I had the frontend up and running and he was also unsure how this could be achieved and suggested I just add an additional filter dropdown to toggle between the two for now. 
+The 'Liked' page shows a list of events a logged-in user has 'liked'. On this page, if the user clicks the heart icon again to 'unlike' that activity, the count will go down by one and, upon refresh, that event will no longer be visible on that user's liked page.
 
 ## Contact
 
-At the top of the profile page, the user can still see the popular profiles component as a permanent feature across the site, but the top upcoming events component has been replaced by a messaging system component. On desktop devices the message component is visible on the right of popular profiles, but for tablet and mobile it moves into place between the popular profiles and the User Profile Stats. 
+Logged in users can contact the DSM Official account for questions about activities and other correspondence. Clicking the Contact DSM icon in the navigation bar will bring the user to a form they can fill out and submit. 
 
-If you are viewing someone else's profile, the message component contains a form to write a message and send it to the owner of the profile page you are viewing. 
+![Contact DSM](images/contact.png)
 
-![Create Message](images/message-create.jpg)
+All fields are mandatory and error messages will appear if one is left blank or if the email field is invalid. 
 
-If you are viewing your own profile page the messaging component will display your own private message inbox. Other users will not be able to see the messages that have not been sent to them. All messages that have been sent to you, are displayed in descending order of when they were sent. You can see the avatar and the username of the sender, the date the message was sent, and the message itself. Each message has a 'reply' button if the user wants to send a reply message back to the sender. 
+![Contact DSM-Blank fields](images/contact-blank-fields.png)
 
-![Received Messages](images/message-inbox.jpg)
-![Messages - Reply](images/message-reply.jpg)
+![Contact DSM-Invalid email](images/contact-invalid-email.png)
 
-Unlike with other forms such as creating an event, comment or review, where you can see the published content once the form has been posted successfully, the user does not have access to other user's inboxes to check whether the message has been sent successfully or not. For this reason, in the case of the messaging component, I have set up an alert system using Bootstrap alerts, to display a success alert message when a message or a reply message have been sent successfully. This adds to good user experience, and user peace of mind. 
+Since this website is for learning purposes only, the contact message will go to the backend database and not an actual email account. Once the form is sent, a 'Thank you' message will be displayed to the user and they can then continue navigating the website.
 
-![Message Alert](images/message-alert.jpg)
+![Contact DSM-Thank you](images/contact-thankyou.png)
 
-Equally, if the user tries to send a blank message, they will see a Bootstrap warning message telling them that they must fill in the message field in order to send the message successfully. 
+## Reviews
 
-![Message Alert](images/message-error.jpg)
+Only logged in users can access the reviews page. The page layout is similar to the Feed, Liked and Homepage with the navigation bar at the top with a search bar under it and the Most Followed Profiles section to the right, on desktop. The reviews section itself shows all of the activities posted and the user can click to create their own review comment (mandatory) and a star rating (0-5).
 
-For the time being, there is no alert system in place to send a notification to a user when they receive a new message, but this is something I would like to look into in future development sprints.
+Each activity to review includes the avatar of the user who posted the event, the title of the activity, the average rating in stars and the review count. At the far right, a 'post a review' button is shown where the user can review the event.   
 
-### Reviews
+![Reviews-Desktop](images/all-reviews.png)
+![Reviews-Mobile](images/reviews-mobile.png)
 
-If the user is logged in, they can access the reviews page. The structure of this page is the same as the other events pages with the popular profiles component, the top upcoming events component and the search events component all still visible. The filter for the events listed however is different. The initial filter in the App.js file (filter={`?ordering=-event_date`}) orders the full list of events retrieved by their event_date in descending order. Once the full list has been called and ordered, a second filter (event_date__lte=${date}) is applied to remove any events where the event_date is less than or equal to today's date.
+If the user hovers over the review count number, a message will pop up telling them to click to read the reviews. Doing this will open the review comments component and the user will be able to read others' reviews.
 
-This differentiates the usage between the comments feature and the reviews feature. The comments are intended to be posted while an event is being promoted, prior to it taking place, to gauge the level of enthusiasm for the future event. The reviews are only for past events that have now taken place where people who attended can leave their feedback for others to read. 
+![Reviews-Read](images/read-reviews.png)
+![Reviews-Read](images/reviewed-event.png)
 
-When the user first enters the reviews page, each past event is listed with the following information: The profile avatar of the event host, the event title, the event date, the event's average rating score and the review count. This information is displayed in an in-line block on desktop devices and in column format on tablets and mobile. 
+Each activity follows this structure, which includes a button to post a review. However, owners cannot review their own activity. A tooltip message will be shown if a user tries to do this.
 
-![Event Review Summary - desktop](images/review-desktop.jpg)
-![Event Review Summary - mobile](images/review-mobile.jpg)
+![Reviews-Read](images/review-own.png)
 
-If you hover your mouse over the review count a tooltip tells you that you can click to view the individual opinions which have been left. The review comments component will open and close on a toggle function as you click the review count button. 
+Lastly, users can only review an event one time, though they can edit their review message. To change the star rating, the user will have to delete their review and start again.
 
-![Event Review Comments](images/review-comments.jpg)
+![Reviews-Read](images/review-twice.png)
+![Reviews-Read](images/edit-review.png)
+![Reviews-Read](images/change-rating.png)
 
-Each event has a button prompting the user to post a review. If you are the owner of the event, a tooltip will tell you that you are not allowed to review your own event, and the button remains inactive. Similarly, if you have already posted a review to the selected event, the tooltip will tell you that you have already reviewed the event and will prevent you from posting a second. You can click on the event title to take you to the event details page and see more information about the event. You can also click on the avatars to see the profile page of the user who posted the event, or the profiles of other users who have left reviews.  
+[Back to top](<#table-of-contents>)
 
-If the event is not your own, and you haven't previously submitted a review, you can click the button and access the modal pop up for writing a review. 
-
-![Write a Review](images/review-create.jpg)
-
-The review form has two parts to it. Firstly, it has a five star rating component, which I installed and followed the library documentation from [NPM React Simple Rating](https://www.npmjs.com/package/react-simple-star-rating). Then it has a text input field for users to publish an opinion. The input field is mandatory so you must leave a comment if you want to post a review, but if you leave the star rating blank, it will assume you are leaving a bad review and allocate 0 stars to your published review, and the average rating for the event will be recalculated accordingly. 
-
-If you make a typing error or you wish to change your comments, once the review is published you have the option to edit the comments, or delete the entire review and start again if you want to change the star rating as well. If you want to delete the review, similarly to the event deletion, you will see a popup message asking you to confirm the delete request before it is actually removed from the site. 
-
-![Edit a Review](images/review-edit.jpg)
 
 ## Profile Page
 
-Throughout the site, wherever you see profile avatars, albeit in the popular profiles component, or next to events, comments or reviews that have been published, you can click on the avatar to view the full profile page of that user. In the Navigation Bar, in the authentication dropdown, you can access your own profile page as well.  
+Clicking on the avatar image of any user will take you to the profile page for that user. There you will see the option to follow / unfollow them, how many posts they've created, followers they have, how many other users they're following and the events they've posted.
 
-### Profile Stats
+![Profile of User](images/profile-user.png)
 
-When a user signs up and creates a new site account, a basic profile is automatically created with a username, password and defauly avatar image. The only information that subsequently gets updated in the profile page is the site usage stats, as follows: 
+If you click your own avatar, you'll be taken to your own profile page where you will see events you've created and the option to edit your profile.
 
-* Number of events the user has posted
-* Number of events the user has flagged as going
-* Number of profiles they are following
-* Number of profiles that are following them
+![Your own Profile](images/own-profile.png)
 
-There is an about container and a contact details container which remain empty until the user goes into their own profile page and clicks on the three dots dropdown to Edit the profile and add their personal details to the page. If they click on the Edit Profile option, they are taken to a new page containing the full profile details form to fill in and submit. Here, they can add their own avatar image, a name, bio, website address, instagram or facebook link, a telephone number and an email address. These are designed mainly to give event hosts the opportunity to publish additional contact information and social media links but of course all users are welcome to add as much or little personal info as they wish. 
+Clicking the pencil icon will let you select one of three option: edit profile, change username or change password. Choosing to edit your profile will take you to a page where you can change your bio information or avatar image. 
 
-![Profile Edit](images/profile-edit.jpg)
+![Edit Profile](images/edit-profile.png)
 
-Once these fields have been filled in, they can be seen by other users in the main profile page stats container. Any website links that are entered can be clicked on to open the website in a new browser tab. 
+# **Future Implementations**
 
-Each profile also has a follow button inside the stats container so that other users can click it to follow and unfollow the profile as all profiles won't always appear listed in the popular profiles component, to access the follow functionality there. 
+**Back To Top Scroll component** 
 
-![Profile Stats](images/profile-stats.jpg)
+I have the infinite scroll component implemented on this website, meaning the page can get pretty long if there are a lot of activities posted. I thought about including  a 'back to top' button once the user had scrolled down 1000px and had this button created and working during the process. However, upon testing at the end of the project, I noticed errors arising at various times, depending on whether a user was logged in or not, though these errors weren't always habitual. Given that this feature is not necessary for the application to work properly, I ultimately deleted it from production. In future versions of the website, it would be a nice feature to include to improve the UX.
 
-### Profile Posts
+**Date / Time Component** 
 
-Below the profile stats you can see all the events posted by the profile you are viewing. Any of these can be clicked on to view the individual event detail page with comments if there are any. 
+Incorporate the ability for people to post their activity and include the date and time it's happening. This would enable the community to actively participate in events around town.
 
+**Map**
 
-* ## Reusable React Components
+Include Google Maps or some other mapping or GPS component to show the exact location of the event. This would enable attendees to enter in the address or coordinates into a GPS and arrive to the event, hopefully without issue.
 
-### Three Dots Edit Delete Dropdown Menu
+**RSVP buttons**
 
-Based on the Moments walkthrough project 'MoreDropdown' component, I have utilised the same idea in my project but extended it's use even further to be accessed when editing or deleting events, comments and also reviews. In addition to this re-usable component which I learnt from the course tutorials, I also developed four more custom re-usable components specifically for my project.
+Create some type of attendance system to show interest in the activity and allow hosts to plan for the quantity of people coming to the event.
 
-### Delete Confirmation Component
+**Delete Confirmation**
 
-In order to improve defensive design, I wanted to add a validation check before data gets deleted from the site. For this reason, I have developed a modal pop-up component which double checks whether the user wants to continue with their choice, after having clicked the delete button from the EditDeleteDropdown component on an event, a comment or a review. This component checks what type of data the user is trying to delete, and customises the modal message appropriately. On clicking the 'Confirm Deletion' button the corresponding handleDelete function is called, and the data is removed from the site
-
-![Delete Event](images/delete-event.jpg)
-![Delete Comment](images/delete-comment.jpg)
-![Delete Review](images/delete-review.jpg)
-
-### Date Formatter Component
-
-Originally, I tried to format the event event_date field on the backend, but it caused all sorts of error messages and I couldn't quite get it to work correctly. Having consulted tutor support, they told me that it was also possible to leave the date format on the backend and just format it where necessary on the frontend. There are three areas in this site where event_date is published; in the event posting, in the top upcoming events component, and in the review listings. 
-
-When I tried requesting the event_date from the API in a formatted form, it came through OK, similar to how the created_at date is formatted in the backend, but then when it came to pre-populating it back into an edit form, it wouldn't go back correctly into the date field. I therefore decided to leave the date format for all the API requests in it's original format, and just created a re-usable function - 'DateFormatter.js' to make it appear nicely for the front end user to view. 
-
-![Date Unformatted](images/date-before.jpg)
-![Date Formatted](images/date-after.jpg)
-
-### Alert Component
-
-As stated previously, there is no way for the user to check whether the message form has been submitted correctly or not, as the user doesn't have access to other user's inbox. I therefore wanted to set up a bootstrap success alert. Initially I created this as a single function inside the MessageCreateForm.js component. In a later sprint, when I was developing the reply feature, I decided to create a re-usable Alert component which could be used interchangeably between the send message and reply message forms. I refactored the code inside the MessageCreateForm component and imported the newly created AlertMessage component into the ReplyMessageForm.js component as well. In future development, I can extend this functionality to show user alerts in more areas of the site. 
-
-### Scroll to Top Component
-
-With the infinite scroll functionality in place, once there are a lot of events posted to the site, and the user scrolls a long way down looking at posts, once they want to return to the navbar options, it takes a long time to manually scroll all the way back up again, harming user experience.  For this reason, I have implemented a button which appears once the user has scrolled down more than 1000px ( appears after viewing the first post) and remains fixed to the bottom of the screen for when the user wants to return to the navbar menu at the top. 
-
-Initially I implemented a simple button at the bottom of the events pages screen which takes the user back to the top of the window. However, in this scenario the user has to scroll through all events to reach the button. Looking at an article from [W3Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) I added CSS to fix the button to the bottom of the page, and a function to keep the button hidden until the user has scrolled down more than 1000px. I moved this function into a re-usable hook component, which I then imported into the Profile Page and the Reviews page as well. 
-
-![Back to the Top Button](images/scroll-button.jpg)
+Confirming a delete before executing it is an aspect that would be beneficial to this website. At the moment, users can delete posts, comments and reviews with just one click of a button. A tool tip or other pop-up message asking the user if they're sure they want to delete would be a safer way to erase information, helping to guard against accidental deletes and therefore, loss of data.
 
 [Back to top](<#table-of-contents>)
 
-# **Features Left to Implement**
-
-* Add a notification system in to alert users when they receive a new message
-* Differentiate between types of users - event hosts and event attendees -  set up profiles pages accordingly
-* Turn this into a mobile app
-* Get users from my town signed up and using the site to generate data, and get real user feedback for future sprints
-* Set alerts for when events in your MyEvents page are about to take place
-
-[Back to top](<#table-of-contents>)
-
-# **Technologies Used - Frontend**
+# **Technologies Used**
 
 ## Languages
 
-* [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
-* [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
-* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
-* [React.js](https://en.wikipedia.org/wiki/React_(software)) - Provides the base for the frontend components
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Used for content and structure of the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Used for styling of pages.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website.
+* [React.js](https://en.wikipedia.org/wiki/React_(software)) - Used to develop frontend components.
 
 ## Frameworks & Software
-* [React Bootstrap](https://react-bootstrap.github.io/) - A CSS framework that helps build solid, responsive, mobile-first sites
-* [Balsamiq](https://balsamiq.com/) - Used to create the wireframes
-* [Github](https://github.com/) - Used to host the repository, store the commit history and manage the project board containing user stories and bug reports.
-* [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
+* [React Bootstrap](https://react-bootstrap.github.io/) - A CSS framework used to aid the developer in creating responsive, mobile-first websites.
+* [Figma](https://figma.com/) - Used to create wireframes for the website
+* [GitHub](https://github.com/) - Hosts both the frontend and backend repositories for this project. Stores commit history and manages project boards for user stories.
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that houses this deployed application, both frontend and backend.
 * [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test site performance.
-* [Responsive Design Checker](https://www.responsivedesignchecker.com/) - Used for responsiveness check across devices.
+* [UI Dev Amiresponsive](https://ui.dev/amiresponsive) - Used to check responsiveness of this application on various device sizes.
 * [Favicon](https://favicon.io/) - Used to create the favicon.
-* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness.
-* [Cloudinary](https://cloudinary.com/) - A service that hosts image files in the project.
-* [My Free Logo Maker](https://myfreelogomaker.com/explore) - Used to create the Happening brand logo
-* [ColorSpace](https://mycolor.space/?hex=%23081045&sub=1) - Used to create the colour palette
-* [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
-* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
-* [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
+* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to test app responsiveness and debug.
+* [Cloudinary](https://cloudinary.com/) - Used to host all image files for this application.
+* [Coolers](https://coolors.co/) - Used to create the color palette for this project.
+* [HTML Validation](https://validator.w3.org/) - Validate HTML code in this project.
+* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Validate CSS code in this project.
+* [JSHint Validation](https://jshint.com/) - Validate JavaScript code in this project.
 
 ## Libraries
 
-* [NPM React-star-rating](https://www.npmjs.com/package/react-simple-star-rating) - A simple react component for adding a star rating to your project.
+* [NPM React-star-rating](https://www.npmjs.com/package/react-simple-star-rating) - Component used to incorporate the star-rating system for the Reviews section of this application.
 
 [Back to top](<#table-of-contents>)
 
 # Testing
 
-Please click [**_here_**](TESTING.md) to read more information about testing Happening Frontend
+Click [**here**](TESTING.md) for detailed information on the testing processes completed for the Iowa Summer Activities frontend.
 
-[Back to top](<#table-of-contents>)
 
 # Deployment
 
-### Deployment to Heroku
+<!--### Deployment to Heroku
 
 Once you have created a new gitpod workspace and set up the new project, you are ready to deploy to Heroku. 
 

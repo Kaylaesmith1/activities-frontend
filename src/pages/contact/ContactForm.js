@@ -110,7 +110,7 @@ const ContactForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            {errors.email?.map((message, idx) => (
+            {errors.subject?.map((message, idx) => (
               <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
