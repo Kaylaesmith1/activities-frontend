@@ -41,44 +41,6 @@ Take a look at the live website [here](https://activities-frontend-6f71eff2ee1a.
 - [Deployment](#deployment)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
-<!-- ## Table of Contents
-
-- [Project](<#project>)
-    * [Objective](<#objective>)
-    * [Site Users Goal](<#site-users-goal>)
-    * [Site Owners Goal](<#site-owners-goal>)
-    * [Project Management](<#project-management>)
-
-- [User Experience (UX)](<#user-experience-ux>)
-    * [Wireframes](<#wireframes>)
-    * [User Stories](<#user-stories>)
-    * [Site Structure](<#site-structure>)
-    * [Design Choices](<#design-choices>)
-
-- [Existing Features](#features)
-  * [Navigation](#navigation)
-  * [Authentication](#authentication)
-  * [Homepage](#homepage)
-  * [Create an Event](#create-an-event)
-  * [Event Detail Page](#event-detail-page)
-  * [Feed](#feed)
-  * [Liked](#liked)
-  * [Contact DSM](#contact)
-  * [Reviews](#reviews)
-  * [Profile Page](#profile-page)
-  * [Reusable React Components](#reusable-react-components)
-
-- [Features Left To Implement](<#features-left-to-implement>)
-
-- [Technologies Used](<#technologies-used>)
-    * [Languages](<#languages>)
-    * [Frameworks & Software](<#frameworks--software>)
-    * [Libraries](<#libraries>)
-- [Agile Workflow](#agile-workflow)
-  * [Github Project Board](#github-project-board)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Credits](#credits) -->
 
 # **Project**
 
@@ -442,12 +404,12 @@ Confirming a delete before executing it is an aspect that would be beneficial to
 
 [Back to top](<#table-of-contents>)
 
-# Testing
+# **Testing**
 
 Click [**here**](TESTING.md) for detailed information on the testing processes completed for the Iowa Summer Activities frontend.
 
 
-# Deployment
+# **Deployment**
 
 ### Deployment to Heroku
 1. Log into your heroku account, select Create New App, and name it something unique to this project.
@@ -484,14 +446,14 @@ Another option is to clone the repository, which will link the copy to the origi
 
 [Back to top](<#table-of-contents>)
 
-# Credits
+# **Credits**
 
 * All images were obtained through a Google search and are only used for the purpose of this project.
 * I used [Removebg](https://www.remove.bg/) to make the image background transparent on the logo and favicon for this application.
 * I saw that another student, [Kelly](https://github.com/quiltingcode), had used this documentation to create the [star rating system](https://www.npmjs.com/package/react-simple-star-rating) for the reviews component. I also read through this information and looked at her repository and project to see how she implemented the component.
 
 
-# Acknowledgements
+# **Acknowledgements**
 This application and website are completely fictional and for use only from a learning standpoint. The site was created for Portfolio Project 5 (Advanced Front End) - Diploma in Full Stack Software Development through [Code Institute](https://www.codeinstitute.net). 
 
 I would like to thank the alumni, fellow students and tutors that I reached out to through slack and the tutoring section of our program. People from all three were helpful to me in answering questions and helping me work through bugs or understanding the pathways to properly connect the backend with the frontend. 

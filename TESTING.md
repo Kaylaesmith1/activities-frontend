@@ -1,24 +1,52 @@
 Return to [README](README.md)
 
-# Manual testing
-**The following tests were done manually and passed.**
+# **Iowa Summer Activities**
 
-<!--## Sign up
-- Page features a form for signing up to Garden Diaries.
-- Filling out a valid form posts the data to the API and creates a new user.
+# Manual Frontend Testing
+
+## Table of Contents
+
+* [**Testing**](<#testing>)
+    * [Code Validation](<#code-validation>)
+    * [Manual Testing](<#manual-testing>)
+    * [Lighthouse Testing](<#lighthouse-testing>)
+    * [Peer Review](<#peer-review>)
+    * [Known Bugs](<#known-bugs>)
+
+
+## Code Validation
+- HTML validator
+
+- CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/).
+
+- JS Hint validator
+
+- Accessibility rating in Lighthouse:
+
+![Accessibility score](src/assets/readme-images/lighthouse.png)
+
+## Manual Testing
+### Sign up
+- The sign up page includes a form for registering as a user with Iowa Summer Activities.
+- Filling out a valid form (including username and password) posts the data to the API and creates a new user.
 - Filling out a valid form redirects the user to the Sign in page.
-- Filling out an invalid form notifies the user what changes they need to make.
-- The form is fully responsive to different screen sizes.
-- The form features a link to the sign in form, redirecting users to the sign in page.
+- Filling out an invalid form notifies the user what changes they need to make, which can be: leaving a field blank, too short or too common a password or passwords not matching.
+        ![Blank Fields](images/blank-field.png)
+        ![Blank Fields](images/password-short.png)
+        ![Blank Fields](images/no-match.png)
 
-## Sign in
+
+- The form is fully responsive on various screen sizes.
+- At the bottom of the form, there is a sentence and link to the sign in form, should the user have come to the sign up page erroneously. Clicking that link will redirect them to the sign in page.
+
+<!-- ## Sign in
 - Page features a form for signing in to Garden Diaries.
 - Filling out a valid forms let the user sign in and redirects the user to the home page with a signed in view.
 - Filling out an invalid form notifies the user what changes they need to make.
 - The form is fully responsive to different screen sizes.
 - The form features a link to the sign up page, redirecting users to the sign up page. 
 
-## Navbar
+## Navigation Bar
 
 ### Non authorized user
 - The navbar features links to the Sign in and Sign up pages.
@@ -232,4 +260,24 @@ Return to [README](README.md)
 - The use click outside hook let the user close the navbar hamburger menu when clicking outside of it. 
 
 ### Use redirect hook
-- The use redirect hook redirects the user as expected where used.
+- The use redirect hook redirects the user as expected where used. -->
+## Lighthouse Testing -- REDEPLOY AND DO AGAIN
+Google Lighthouse in Chrome Developer Tools was used to test the application within the areas of *Performance*, *Accessibility*, *Best Practices* and *SEO*. The testing was done on the homepage both as a logged out and a logged in user for a desktop device as well as for both users on a mobile device. The results are as follows:
+
+<details><summary><b>Lighthouse Results</b></summary>
+
+Homepage Logged Out (Desktop)![Home Page](images/lighthouse-loggedout-desktop.png)
+Homepage Logged Out (Mobile)![Home Page](images/lighthouse-loggedout-mobile.png)
+Homepage Logged In (Desktop)![Home Page](images/lighthouse-loggedin-desktop.png)
+Homepage Logged In (Mobile)![Home Page](images/lighthouse-loggedin-mobile.png)
+
+</details><br/>
+
+### Peer Review
+I personally tested this application in Chrome, Safari and Firefox on laptop and mobile devices. The website worked well with no issues that I noted. 
+
+Additionally, I had peers and family members, both within the tech community and outside of it, text the website for useability. Their response was positive and they found no issues with the platform.
+
+<!-- ## Known Bugs
+
+Discuss bugs -->
