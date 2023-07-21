@@ -266,12 +266,12 @@ Google Lighthouse in Chrome Developer Tools was used to test the application wit
 
 <details><summary><b>Lighthouse Results</b></summary>
 
-Homepage Logged Out (Desktop)![Home Page](images/lighthouse-loggedout-desktop.png)
+<!-- Homepage Logged Out (Desktop)![Home Page](images/lighthouse-loggedout-desktop.png)
 Homepage Logged Out (Mobile)![Home Page](images/lighthouse-loggedout-mobile.png)
 Homepage Logged In (Desktop)![Home Page](images/lighthouse-loggedin-desktop.png)
 Homepage Logged In (Mobile)![Home Page](images/lighthouse-loggedin-mobile.png)
 
-</details><br/>
+</details><br/> -->
 
 ### Peer Review
 I personally tested this application in Chrome, Safari and Firefox on laptop and mobile devices. The website worked well with no issues that I noted. 
