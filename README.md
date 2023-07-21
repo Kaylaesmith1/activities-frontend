@@ -11,7 +11,37 @@ Though it could have a place in a real-world setting, this website was created f
 Take a look at the live website [here](https://activities-frontend-6f71eff2ee1a.herokuapp.com/).
 
 ![Responsive design](images/amiresponsive.png)
-## Table of Contents
+
+# [Table of Contents](#table-of-contents)
+- [**Project**](#project)
+  - [Objective](#objective)
+  - [Site User's Goal](#site-users-goal)
+  - [Site Owner's Goal](#site-owners-goal)
+  - [Project Management](#project-management)
+- [**User Experience (UX)**](#user-experience-ux)
+  - [Wireframes](#wireframes)
+  - [User Stories](#user-stories)
+  - [Site Structure](#site-structure)
+  - [Design Choices](#design-choices)
+- [**Existing Features**](#existing-features)
+  - [Authentication](#authentication)
+  - [Homepage](#homepage)
+  - [Create an Event](#create-an-event)
+  - [Feed](#feed)
+  - [Liked](#liked)
+  - [Contact](#contact)
+  - [Reviews](#reviews)
+  - [Profile Page](#profile-page)
+- [**Future Implementations**](#future-implementations)
+- [**Technologies Used**](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks & Software](#frameworks--software)
+  - [Libraries](#libraries)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+<!-- ## Table of Contents
 
 - [Project](<#project>)
     * [Objective](<#objective>)
@@ -48,7 +78,7 @@ Take a look at the live website [here](https://activities-frontend-6f71eff2ee1a.
   * [Github Project Board](#github-project-board)
 - [Testing](#testing)
 - [Deployment](#deployment)
-- [Credits](#credits)
+- [Credits](#credits) -->
 
 # **Project**
 
@@ -180,8 +210,8 @@ Though seven colors can seem excessive, the darker colors are only used for some
 
 The main fonts used on this site are 'Montserrat' and 'Lato', both with a fallback font of Sans-Serif, should the page not load properly. These fonts are both clear and have good letter spacing on their own, which make them easy to read for most users.
 
-![Typography Lato](images/typography-lato.png)
 ![Typography Montserrat](images/typography-montserrat.png)
+![Typography Lato](images/typography-lato.png)
 
 [Back to top](<#table-of-contents>)
 
@@ -419,64 +449,54 @@ Click [**here**](TESTING.md) for detailed information on the testing processes c
 
 # Deployment
 
-<!--### Deployment to Heroku
+### Deployment to Heroku
+1. Log into your heroku account, select Create New App, and name it something unique to this project.
+2. Select the region corresponding to where you are and click 'Create App'.
+3. Click the 'Deploy' tab and select GitHub as the 'deployment method'.
+4. Search for your project repository and click 'Connect'.
+4. Click 'Deploy Branch' for Heroku to start the build process.
+5. If the build is successful, you'll see the 'build succeeded' message. Click 'Open App' to view your live Heroku application in the browser.
 
-Once you have created a new gitpod workspace and set up the new project, you are ready to deploy to Heroku. 
+### Connect the React Frontend to the backend API
 
-1. In your heroku account, select Create New App, and give it a unique name related to your project. 
-2. Select a region corresponding to where you live and click 'Create App'.
-3. Head into the 'Deploy' tab select GitHub as the 'deployment method', find your project repository and click 'Connect'.
-4. Click 'Deploy branch' to trigger Heroku to start building the application. 
-5. Once you see the message saying 'build succeeded' you can click 'Open App' to see your application in the browser. 
+After the workspace is set up and the Heroku deployment successful, you can connect the workspace to the backend API.
 
-### Connect React Frontend to the API backend
-
-Once you have set up the workspace and done a basic deploy to Heroku, you can connect the react workspace to your API, in order to send data to the API
-
-1. In the Heroku dashboard, go into the API application settings
-2. In 'Settings' add a new Config Var called 'CLIENT_ORIGIN' and set that to the URL for your deployed React application. In my case, this would be [https://happening-react.herokuapp.com](https://happening-react.herokuapp.com).
-3. Then add another Config Var called 'CLIENT_ORIGIN_DEV' and enter the URL of your Gitpod preview link, remembering to remove the trailing slash at the end. Gitpod occasionally changes this URL so keep an eye on it, as you are working on your project. 
-4. Go back into your frontend Gitpod workspace, and install the Axios library using the command 'npm install axios'.
-5. Create a folder called 'API' and inside it create a file called 'axiosDefaults'.
-6. import axios at the top of the file
-7. Define your baseURL which is the unique URL of your deployed API project. In my case this would be [https://happening-api-kelz.herokuapp.com/](https://happening-api-kelz.herokuapp.com/)
-8. Set the content-type header to multi-part/form-data as the API will need to deal with images as well as text in it's requests.
-9. In order to avoid any CORS issues, set withCredentials to True.
-10. Import this file into App.js to be used across all pages
+1. Go to the API application settings from the Heroku dashboard.
+2. In the 'Settings' tab, click on 'Reveal Config Vars' and add 'CLIENT_ORIGIN'. Set that to the URL for the deployed React frontend application.
+3. Add an additional Config Var, 'CLIENT_ORIGIN_DEV', and paste in the URL of your local gitpod workspace, making sure to exclue the '/' at the end of the URL.
+4. Go back to your frontend gitpod workspace and install the Axios library using the command 'npm install axios'.
+5. Create a folder called 'API' and within that, a file called 'axiosDefaults'.
+6. Import axios at the top of the file.
+7. Define the baseURL, which is the URL from the deployed Heroku backend API project.
+8. Set the content-type header to multi-part/form-data since the API will have to deal with both images and text in the requests.
+9. To avoid any CORS issues, set withCredentials to True.
+10. Import this file into App.js to be used throughout the application.
 
 ### Fork this Project Repository
 
-It is possible to make an independent copy of a GitHub Repository by forking the GitHub account. The copy can then be viewed and it is also possible to make changes in the copy without affecting the original repository. To fork the repository, follow these steps:
-
-1. After logging in to GitHub, locate the repository. On the top right side of the page there is a 'Fork' button. Click on the button to create a copy of the original repository.
+For others to be able to work independently furthering this project, they can fork the GitHub repository from the GitHub account. The copy can then be viewed and worked on without changing the original. To fork the repository, log into GitHub and locate the repository, [here](https://github.com/Kaylaesmith1/activities-frontend). At the top right of the page, you'll see a 'Fork' button. Click that button to create a fork of the original repository. 
 
 ### Clone this Project Repository
 
-A Git clone creates a linked copy of the project that will continue to synchronize with the original repository. In order to create a clone, you can click on the 'Code' button inside the selected repository and then select the 'Clone' option from the dropdown list.
+Another option is to clone the repository, which will link the copy to the original and syncronize the updates. To do thi, click the 'Code' button within the selected repository and then choose 'Clone' from the dropdown menu.
 
-![Clone](images/clone.jpg)
+![Clone Repository](images/clone.png)
 
 [Back to top](<#table-of-contents>)
 
 # Credits
 
-* The image on the sign in and sign up page was taken from [Unsplash.com](https://unsplash.com/photos/ekvNI_03FLM)
-* The Upload image on the create event, and edit event and profile page is taken from [pngtree.com](https://pngtree.com/so/uploading)
-* The No Results found image is taken from [hajde/media](https://hajde.media/forum/60)
-* I used [freelogodesign.org](https://www.freelogodesign.org/manager) to design the Happening brand logo
-* I used [fotor.com](https://www.fotor.com/features/background-remover/upload) to make the image background transparent on the logo
-* I was passed this [article](https://christopher-dent.medium.com/adding-a-delete-confirmation-to-your-react-app-55221701daa6) by tutor support, in order to help me learn how to create a delete confirmation modal component.
-* Once I had the modal component functioning correctly, in order to refactor it into a re-usable component, I found this helpful [article](https://codemoto.io/coding/react/react-delete-confirmation-modal) to make the necessary changes.
-* I read this article on [Stack Overflow](https://stackoverflow.com/questions/53772417/react-how-to-filter-events-according-to-date) which helped me to create the date filter for the top upcoming events component
-* I then found another article on [Stack Overflow](https://stackoverflow.com/questions/19097631/missing-invoking-a-constructor) to fix the console warning about component brackets.
-* I used [reactgo.com](https://reactgo.com/react-get-current-date/) to learn how to make a variable for today's date
-* I looked at my Mentor, Gareth McGirr's [P5 Project](https://github.com/Gareth-McGirr/body-doodles) to help me get an understanding of how to implement the React-simple-star-rating package. 
-* I read this documentation on the [Star Rating System](https://www.npmjs.com/package/react-simple-star-rating) to help with the install and use of the external component
-* I read an article by [gitconnected.com](https://levelup.gitconnected.com/how-to-create-a-scroll-to-top-button-in-reactjs-7b2f2563d6b0) to help me create a scroll to the top button
-* I read an article by [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) which helped mt to turn the scroll to top element into a re-usable component
+* All images were obtained through a Google search and are only used for the purpose of this project.
+* I used [Removebg](https://www.remove.bg/) to make the image background transparent on the logo and favicon for this application.
+* I saw that another student, [Kelly](https://github.com/quiltingcode), had used this documentation to create the [star rating system](https://www.npmjs.com/package/react-simple-star-rating) for the reviews component. I also read through this information and looked at her repository and project to see how she implemented the component.
+
 
 # Acknowledgements
-This fictional site was created for Portfolio Project #5 (Advanced Front End Specialisation) - Diploma in Full Stack Software Development at the [Code Institute](https://www.codeinstitute.net). I would like to thank my mentor Gareth McGirr for his support and feedback during the project. I would also like to thank everyone in my Slack class for their support, and on all the slack channels for answering my questions and concerns during this project and throughout the course. 
+This application and website are completely fictional and for use only from a learning standpoint. The site was created for Portfolio Project 5 (Advanced Front End) - Diploma in Full Stack Software Development through [Code Institute](https://www.codeinstitute.net). 
+
+I would like to thank the alumni, fellow students and tutors that I reached out to through slack and the tutoring section of our program. People from all three were helpful to me in answering questions and helping me work through bugs or understanding the pathways to properly connect the backend with the frontend. 
+
+I'd also like to thank my mentor for this project, Akshat Garg, who was integral in helping me get my Reviews page working properly when I thought I was going to have to scrap it and start with something more basic. His feedback and troubleshooting during our mentor meetings was constructive and I appreciate him taking the time to explain the code he helped me with.
 
 *Created by [Kayla Smith](https://github.com/Kaylaesmith1) as part of Code Institute's Diploma in Fullstack Development, July 2023. For educational use only.*
 
