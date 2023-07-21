@@ -161,9 +161,10 @@ As the developer I can create a followers section so that registered, logged in 
 
 [Back to top](<#table-of-contents>)
 
-## Site Structure - FINISH THIS SECTION
+## Site Structure
 
-<!-- Happening is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available.  -->
+ The Iowa Summer Activities website is interactive, both for non registered, non logged-in users and for users signed into their account. Depending on the login status, some pages may not be visible to the user. When a user is not logged into their account, they see the home page, the sign in page and the sign up page in the navigation bar. . Onces logged in
+  is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available.
 
 ## Design Choices
 
@@ -171,7 +172,7 @@ As the developer I can create a followers section so that registered, logged in 
 
 When choosing a color palette for this application, I wanted something bright and summery but that had contrasting tones for text. I wanted to have a lighter backgroud color but still have the navitation bar and post sections stand out so as not to take away from the actual content of the site. 
 
-Though seven colors can seem extensive, the darker colors are only used for some of the text and various icons, while the lighter tones are used for buttons and the rest of the overall layout of the page.
+Though seven colors can seem excessive, the darker colors are only used for some of the text and various icons, while the lighter tones are used for buttons and the rest of the overall layout of the page.
 
 ![Color Palette](images/color-scheme.png)
 
@@ -186,39 +187,41 @@ The main fonts used on this site are 'Montserrat' and 'Lato', both with a fallba
 
 # **Existing Features**
 
-* ## Navigation -- START HERE
+* ## Navigation
 
-<!--The navigation bar is very clean and straight forward. Depending on whether you are logged in or not, different menus are visible for the site user. For tablet and mobile devices, the navigation bar menu turns into a hamburger dropdown list. 
+The navigation bar is straight forward and easy to interact with. Depending on the user's log-in status, different icons for different pages are visible. When navigating from a tablet or mobile device, the full navigation bar becomes a hamburger dropdown menu with the site icon to the far left.
 
-On accessing the site for the first time, the user is logged out and the following menu items are visible:
+For first time users and for those who are logged out of their account, the following menu is visible:
 
-* Happening Logo - On the far left hand side of the navigatin bar is the Happening brand logo. This is visible throughout the site to all user types and contains a link back to the homepage. 
-* Home - the first menu item, and the initial default start page, is 'Home', where all events shared among the community are displayed. 
-* Authentication - Next is a dropdown menu in the form of a profile icon. Within this dropdown the user has the options to Signin or Signup which takes them to the respective page. 
+* Iowa Summer Activities Logo - On the far left hand side of the navigation bar users can see the Iowa Summer Activities logo. This logo is identical to the browser tab favicon for easy brand recognition and is visible on all pages of the site. Clicking the logo will return the user to the homepage.
+* Homepage - The first menu icon and the landing page of the site is the homepage. Here, the user can see all activities, their descriptions and view any comments. At the top, there is a search field where users can search an activity by keyword or author, while on the right-hand side, there is a section of most followed profiles.
+* Authentication - Users can either sign up for an account or sign into their existing one. Clicking either of these icons will take users to the corresponding page.
 
-![Logged out Navbar](images/navbar-loggedout.jpg)
-![Logged out Navbar Mobile](images/navbar-loggedout-mobile.jpg)
+![Logged-out Navbar Desktop](images/navbar-desktop-loggedout.png)
+![Logged-out Navbar Mobile](images/navbar-mobile-loggedout.png)
 
-Once the user logs in, additional links become available to select:
+Once logged in, the user will see additional icons and be able to navigate to those pages. Those include:
 
-* Feed - Logged in users can access the feed page where they can see events of other profiles they follow.
-* My Events - Logged in users can access the My Events dropdown menu where they can view either all the events where they have clicked 'interested' or all the events where they have clicked 'going'.
-* Reviews - Logged in users can go to the reviews page and read reviews about events
-* Authentication - The icons within the authentication change once a user has logged in, and now display a link to the user's own profile page or a link to sign out of the site. 
-* Add Event - Logged in users can access the event creation page to share their own events to the site. 
+* Create an Event - On this page the user can create a post for an activity. They're asked to enter in a title, a brief description and to upload an image. Both the image and title fields are obligatory.
+* Feed - Here users can see a list of activities. To the right, they have a section of 'most followed profiles' and just under the navigation bar, a search bar is visible where users can search by keyword or by author.
+* Liked - This page shows all events or activities the logged-in users has 'liked'. Clicking again on the heart icon will 'unlike' the activity and it will be removed from this page upon refresh. 
+* Contact DSM - Users can contact the Des Moines city officials in charge of this website and who have an eye on the activities posted. Given that this site has been developed for learning purposes only, the contact messages go to the backend API database and not to a real city official. 
+* Reviews - Users can review any activity for which they are not the author. They can leave a review message and a star review of 0-5 stars as well as reading other users' review posts. Users are unable to review an event they posted and users can not review an activity more than once.
+* Authentication - The only icon that appears for logged-in usres is the 'sign out' icon, which will log the user out if clicked and return them to the homepage.
+* Profile - This is the user's own profile that will show their avatar image if they uploaded one. If not, a default avatar image will be displayed. Clicking the avatar will bring them to their profile page where they can see all activities they posted and update their profile. Users can change their username or password and edit their profile, updating the avatar image and their bio information.
 
-![Logged in Navbar](images/navbar-loggedin.jpg)
-![Logged in Navbar Mobile](images/navbar-loggedin-mobile.jpg)
+![Logged-in Navbar Desktop](images/navbar-desktop-loggedin.png)
+![Logged-in Navbar Mobile](images/navbar-mobile-loggedin.png)
 
 ## Authentication
 
-Users who are new to the site, or haven't previously created an account can click on the Signup Menu option on the Navigation Bar to create a user account.  I have used the standard dj-rest/auth/registration user account signup process for this. 
+<!--Users who are new to the site, or haven't previously created an account can click on the Signup Menu option on the Navigation Bar to create a user account.  I have used the standard dj-rest/auth/registration user account signup process for this. 
 
-![Sign up](images/signup.jpg)
+![Sign up](images/signup.png)
 
 If a user has a Happening user account, they can click on the Signin menu option in the Navigation Bar to sign into their account.
 
-![Sign in](images/signin.jpg)
+![Sign in](images/signin.png)
 
 If the user wishes to sign out, once signed in, the sign out option becomes visible in the Navigation Bar for them to select. 
 
