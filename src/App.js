@@ -23,22 +23,10 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
-// BACK TO TOP BUTTON
-// import BackToTop from "./hooks/BackToTop";
-// import btnStyles from "./styles/Button.module.css";
-// import { Button } from "react-bootstrap";
-
-
-
-
 
 
 function App() {
 
-  // BackToTop();
-  // const handleBackToTop = () => {
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // }
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
 
@@ -92,17 +80,6 @@ function App() {
         </div>
         
         <div>
-  {/* <Button
-    className={`${btnStyles.Button} ${btnStyles.BackToTop} fixed-bottom-5 left-7 z-50 cursor-pointer`}
-    onClick={handleBackToTop}
-    title="Back to Top"
-    id="scrollBtn"
-  >
-    <i className="fa-solid fa-circle-arrow-up" alt="back to top"></i>
-    <br />
-    <span>Back to Top</span>
-  </Button> */}
-
 </div>
 
         </>

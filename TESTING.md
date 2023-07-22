@@ -2,28 +2,48 @@ Return to [README](README.md)
 
 # **Iowa Summer Activities**
 
-# Manual Frontend Testing
+# Frontend Testing
 
 ## Table of Contents
 
 * [**Testing**](<#testing>)
     * [Code Validation](<#code-validation>)
-    * [Manual Testing](<#manual-testing>)
     * [Lighthouse Testing](<#lighthouse-testing>)
+    * [Manual Testing](<#manual-testing>)
     * [Peer Review](<#peer-review>)
     * [Known Bugs](<#known-bugs>)
 
 
 ## Code Validation
-- HTML validator
+### HTML, CSS and JavaScript validation
+HTML validation was done using the [W3C HTML Validator](https://validator.w3.org/). An error was found three times in the document: 'Percentage ("%") is not followed by two hexadecimal digits'. Please see the screenshot below along with a justification of the error.
+<details><summary>HTML Score</summary>
 
-- CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/).
+Validation score![HTML Validation Score](images/validator-html.png)
 
-- JS Hint validator
+Error justification![HTML Error Justification](images/validator-html-justification.png)
+</details><br/> 
 
-- Accessibility rating in Lighthouse:
+CSS files were validated through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/). Any minor errors found on the pages were fixed and sent through the validator again. Ultimately, all pages passed with no errors.
+<details><summary>CSS Score</summary>
 
-![Accessibility score](src/assets/readme-images/lighthouse.png)
+![CSS Validation Score](images/validator-css.png)
+</details><br/> 
+
+JavaScript files were validated through the [JS Hint](https://jshint.com/).
+<details><summary>JavaScript Score</summary>
+
+![JavaScript Validation Score](images/validator-css.png)
+</details><br/> 
+
+### Lighthouse Testing
+
+Lighthouse testing was performed through the Google Chrome Developer Tools was used to test the application's *Performance*, *Accessibility*, *Best Practices* and *SEO* as a logged-in user on a desktop device. The performace score was rather poor, due to the inclusion of images for avatars, posted events and other areas. This score could be improved in future iterations by compressing the images before uploading them.
+
+<details><summary>Lighthouse Score</summary>
+
+![Lighthouse Score](images/lighthouse.png)
+</details><br/> 
 
 ## Manual Testing
 ### Sign up
@@ -39,14 +59,14 @@ Return to [README](README.md)
 - The form is fully responsive on various screen sizes.
 - At the bottom of the form, there is a sentence and link to the sign in form, should the user have come to the sign up page erroneously. Clicking that link will redirect them to the sign in page.
 
-<!-- ## Sign in
+<!--### Sign in
 - Page features a form for signing in to Garden Diaries.
 - Filling out a valid forms let the user sign in and redirects the user to the home page with a signed in view.
 - Filling out an invalid form notifies the user what changes they need to make.
 - The form is fully responsive to different screen sizes.
 - The form features a link to the sign up page, redirecting users to the sign up page. 
 
-## Navigation Bar
+### Navigation Bar
 
 ### Non authorized user
 - The navbar features links to the Sign in and Sign up pages.
@@ -60,11 +80,6 @@ Return to [README](README.md)
 
 ## Home page 
 
-### Jumbotron
-- The jumbotron with a welcome message is displayed to non authorized users. 
-- The jumbotron features a link to the sign up page that redirects the user to the sign up form.
-- The jumbotron is hidden for signed in users. 
-
 ### Popular profiles
 - Avatar and username of users with the most followers are displayed on the home page, followed page, liked entries page and profile page.
 - A `Follow`/`Unfollow` button is displayed next to the avatar and username, to signed in users.
@@ -76,14 +91,6 @@ Return to [README](README.md)
 ### Post feed
 - Diary posts made by all users are displayed on the home page, sorted by latest creation date. 
 - The feed features infinite scrolling, letting the user continue to scroll through content as long as there is any. 
-
-### Diary entries
-- The posts feature the avatar and username of the post owner, which when clicked redirect the user to the profile of the owner.
-- The post features a like icon in shape of a heart, that when clicked increase the like count and saves the entry to the Liked entries page.
-- The post features a comment icon, that when clicked redirects the user to a detailed view of the post.
-- The detailed view of a post lets the user access the commentfield. 
-- The detailed view of a post lets the post owner access the dropdown menu, redirecting the user to the post edit form or letting the user delete a post.
-- When the delete icon is clicked the user is notified with a message, asking if the user want to delete the post. If confirmed, the post is deleted from the website and the API.
 
 ## Add a diary entry
 - The user can access the form to post a diary entry through the link in the navbar.
@@ -157,94 +164,9 @@ Return to [README](README.md)
 - The feed features infinite scrolling, letting the user continue to scroll through content as long as there is any.
 - If the user unlikes a post it is removed from the Liked entries page.
 
-## My Plants
 
-### Plants
-- Plants posted by the signed in user is displayed on the My plants page, only accessible by the owner.
-- The My plants page display the plants posted by the user.
-- The plant page feature a button redirecting the user to the post plant form. 
-- The plant cards display the image, name and planted date.
-- When clicking the plant card the user is redirected to the detailed plant page. 
-- The detailed plant page displayes the image, name, planted date, care instructions and plant type. 
-- The detailed view of a plant lets the post owner access the dropdown menu, redirecting the user to the plant edit form or letting the user delete a post.
-- When the edit icon is clicked the user is redirected to the plant edit form. 
-- When the delete icon is clicked the user is notified with a message, asking if the user want to delete the plant. If confirmed, the post is deleted from the website and the API. 
 
-### Add plants form
-- The user can access the form to post a plant from the button on the plants page.
-- The form features image upload functionality. The image upload field lets the user upload an image.
-- When an image have been added to the image upload field a button is displayed, letting the user reupload a different image if they want to change it.
-- The Name field lets the user add the name of the plant.
-- The Care instructions field lets the user add a text to the post.
-- The Plant type drop down menu lets the user choose what kind of plant it is.
-- The Planted date field lets the user add when the plant was planted. 
-- The form feature a post and cancel button.
-- When the Post button is clicked the form is submitted and the data saved to the api backend. 
-- When the Cancel button is clicked the user is redirected to the previous page.
 
-### Edit plants form
-- When clicking the edit icon in the post page dropdown menu the user is redirected to the plant edit page.
-- The form is prepopulated with the data from the original post.
-- The form lets the user upload a different image. 
-- The form lets the user edit the name, care instructions, type and date fields.
-- The edit form feature a save updates and cancel button.
-- When submitted by clicking the save updated button, the post data is sent to the backend API and updated.
-- When the cancel button is clicked the user is redirected back to the post page.
-
-## To-do list
-
-### To-do
-- Tasks posted by the signed in user is displayed on the To-do list page, only accessible by the owner.
-- The To-do list page only display the tasks posted by the user.
-- The To-do page feature a button redirecting the user to the post task form. 
-- The task cards display the image, title and due date and a check icon to set the task as done.
-- If the task is overdue a red exclamation icon is displayed on the card.
-- When clicking the task card the user is redirected to the detailed task page. 
-- The detailed task page display the image, title, due date and description.
-- If the task is overdue the detailed task page display the text "Task is overdue!"
-- The detailed view of a task lets the post owner access the dropdown menu, redirecting the user to the plant edit form, letting the user delete a post or set the task as done.
-- When the edit icon is clicked the user is redirected to the task edit form. 
-- When the delete icon is clicked the user is notified with a message, asking if the user want to delete the task. If confirmed, the post is deleted from the website and the API. 
-- When the check icon is clicked the user is notified with a message, asking if the task is done. If confirmed, the post is deleted from the website and the API.
-
-### Add task form
-- The user can access the form to post a task from the button on the To-do page.
-- The form features image upload functionality. The image upload field lets the user upload an image.
-- When an image have been added to the image upload field a button is displayed, letting the user reupload a different image if they want to change it.
-- The Title field lets the user add a title for the task.
-- The Desciption field lets the user add a text to the post.
-- The Due date date field let the user set the due date for the task.
-- The form feature a post and cancel button.
-- When the Post button is clicked the form is submitted and the data saved to the API backend. 
-- When the Cancel button is clicked the user is redirected to the previous page.
-
-### Edit task form
-- When clicking the edit icon in the post page dropdown menu the user is redirected to the task edit page.
-- The form is prepopulated with the data from the original post.
-- The form lets the user upload a different image. 
-- The form lets the user edit the title, description and due date fields.
-- The edit form feature a save updates and cancel button.
-- When submitted by clicking the save updated button, the post data is sent to the backend API and updated.
-- When the cancel button is clicked the user is redirected back to the post page.
-
-## Shoppinglist
-
-### Item list
-- The shopping list page display a list of the items added by the signed in user, only accessible by the owner.
-
-### Add item form
-- The form lets the users add an item and it's quantity. 
-- The quantity of an item cannot go below 1.
-- An empty form can't be submitted, user is notified by a message if they try to submit an empty form field.
-- The form feature an add item and cancel button.
-- Submitting the form save the data to the API and update the list.
-- Clicking the cancel button empty the form fields.
-
-### Edit/delete item form
-- Each item in the list feature a dropdown menu to edit and delete an item.
-- When the edit icon is clicked the item edit field is displayed, prepopulated with the item text. 
-- When the edit field is submitted, the post is updated and saved to the API.
-- When the cancel button in the edit field is clicked the item edit field is closed and no changes are made to the API data.
 
 ## Asset component
 - The asset spinner is displaying when loading data from the API on all pages where it's been imported.
@@ -253,27 +175,14 @@ Return to [README](README.md)
 
 ## Hooks
 
-### Overdue check hook
-- The overdue check hook update the task card to display the task overdue icon and text. 
-
 ### Use click outside hook
 - The use click outside hook let the user close the navbar hamburger menu when clicking outside of it. 
 
 ### Use redirect hook
-- The use redirect hook redirects the user as expected where used. -->
-## Lighthouse Testing -- REDEPLOY AND DO AGAIN
-Google Lighthouse in Chrome Developer Tools was used to test the application within the areas of *Performance*, *Accessibility*, *Best Practices* and *SEO*. The testing was done on the homepage both as a logged out and a logged in user for a desktop device as well as for both users on a mobile device. The results are as follows:
+- The use redirect hook redirects the user as expected where used.
 
-<details><summary><b>Lighthouse Results</b></summary>
 
-<!-- Homepage Logged Out (Desktop)![Home Page](images/lighthouse-loggedout-desktop.png)
-Homepage Logged Out (Mobile)![Home Page](images/lighthouse-loggedout-mobile.png)
-Homepage Logged In (Desktop)![Home Page](images/lighthouse-loggedin-desktop.png)
-Homepage Logged In (Mobile)![Home Page](images/lighthouse-loggedin-mobile.png)
-
-</details><br/> -->
-
-### Peer Review
+## Peer Review
 I personally tested this application in Chrome, Safari and Firefox on laptop and mobile devices. The website worked well with no issues that I noted. 
 
 Additionally, I had peers and family members, both within the tech community and outside of it, text the website for useability. Their response was positive and they found no issues with the platform.
