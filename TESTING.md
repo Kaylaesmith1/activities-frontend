@@ -30,15 +30,22 @@ CSS files were validated through the [Jigsaw validator](https://jigsaw.w3.org/cs
 ![CSS Validation Score](images/validator-css.png)
 </details><br/> 
 
-JavaScript files were validated through the [JS Hint](https://jshint.com/).
-<details><summary>JavaScript Score</summary>
 
-![JavaScript Validation Score](images/validator-css.png)
-</details><br/> 
+JavaScript files were manually validated and errors resolved throughout the development process through feedback from the gitpod terminal. 
+
+Files were also manually run through [JS Hint](https://jshint.com/). Though no errors were found, a few 'warnings' were present on various pages. These were largely in relation to the version of ES used:
+
+- Unclosed regular expression.
+- 'Async functions' is only available in ES8 (use 'esversion: 8').
+- 'Object spread property' is only available in ES9 (use 'esversion: 9').
+- 'Optional chaining' is only available in ES11 (use 'esversion: 11').
+
 
 ### Lighthouse Testing
 
-Lighthouse testing was performed through the Google Chrome Developer Tools was used to test the application's *Performance*, *Accessibility*, *Best Practices* and *SEO* as a logged-in user on a desktop device. The performace score was rather poor, due to the inclusion of images for avatars, posted events and other areas. This score could be improved in future iterations by compressing the images before uploading them.
+Lighthouse testing was performed through the Google Chrome Developer Tools was used to test the application's *Performance*, *Accessibility*, *Best Practices* and *SEO* as a logged-in user on a desktop device. 
+
+The performace score was rather poor, due to the inclusion of images for avatars, posted events and in other areas. This score could be improved in future iterations by compressing the images before uploading them.
 
 <details><summary>Lighthouse Score</summary>
 

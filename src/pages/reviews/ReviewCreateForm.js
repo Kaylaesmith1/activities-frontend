@@ -50,7 +50,7 @@ function ReviewCreateForm(props) {
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
-          return post.id === postId
+          return post.id === postId 
             ? { ...post, review_count: post.review_count + 1, average_rating: ((post.average_rating + rating) / post.review_count) }
             : post;
         }),

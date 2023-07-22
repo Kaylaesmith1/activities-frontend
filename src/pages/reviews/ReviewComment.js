@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import styles from "../../styles/Comment.module.css";
 import Avatar from '../../components/Avatar';
@@ -34,15 +34,15 @@ const ReviewComment = (props) => {
   };
   const handleCloseEditModal = () => {
     setShowEditModal(false);
-  }
+  };
   
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/reviews/${id}/`)
+      await axiosRes.delete(`/reviews/${id}/`);
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.filter((post) => {
-          return post.id !== id
+          return post.id !== id;
         }),
       }));
 
@@ -50,11 +50,11 @@ const ReviewComment = (props) => {
         ...prevReviews,
         results: prevReviews.results.filter((review) => review.id !== id),
     }));
-    history.push(`/reviews/`)
+    history.push(`/reviews/`);
     } catch (err) {
       
     }
-    }
+    };
 
   return (
     <div>

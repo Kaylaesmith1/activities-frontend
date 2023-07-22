@@ -25,7 +25,7 @@ function ReviewEditForm(props) {
   const [reviewData, setReviewData] = useState({
     review: "",
 
-  })
+  });
 
   const { review } = reviewData;
 
@@ -35,16 +35,16 @@ function ReviewEditForm(props) {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/reviews/${reviewId}/`)
+        const { data } = await axiosReq.get(`/reviews/${reviewId}/`);
         const {review} = data;
         setReviewData({
           review,
-        })
+        });
       } catch (err) {
       }
     };
     handleMount();
-  }, [history, reviewId])
+  }, [history, reviewId]);
 
   const handleChange = (event) => {
     setReviewData({
@@ -54,15 +54,15 @@ function ReviewEditForm(props) {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const formData = new FormData();
 
-    formData.append('review', review)
-    formData.append('rating', rating)
+    formData.append('review', review);
+    formData.append('rating', rating);
 
     try {
       await axiosReq.put(`/reviews/${reviewId}/`, formData);
-      handleCloseEditModal()
+      handleCloseEditModal();
       setReviewComments((prevComments) => ({
         ...prevComments,
         results: prevComments.results.map((comment) => {
@@ -78,10 +78,10 @@ function ReviewEditForm(props) {
       }));
     } catch (err) {
       if (err.response?.status !== 401){
-        setErrors(err.response?.data)
+        setErrors(err.response?.data);
       }
     }
-  }
+  };
 
   const textFields = (
     <div className="text-center">

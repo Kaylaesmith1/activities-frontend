@@ -22,14 +22,13 @@ import InfiniteScroll from "react-infinite-scroll-component";
 function ReviewsPage({ message="", filter="" }) {
 
 
-  useRedirect ('loggedOut')
+  useRedirect ('loggedOut');
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
   const [query, setQuery] = useState("");
 
-  
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -44,10 +43,10 @@ function ReviewsPage({ message="", filter="" }) {
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchPosts();
-    }, 1000)
+    }, 1000);
     return () => {
-      clearTimeout(timer)
-    }
+      clearTimeout(timer);
+    };
     
   }, [filter, query, pathname]);
   
