@@ -66,134 +66,135 @@ The performace score was rather poor, due to the inclusion of images for avatars
 - The form is fully responsive on various screen sizes.
 - At the bottom of the form, there is a sentence and link to the sign in form, should the user have come to the sign up page erroneously. Clicking that link will redirect them to the sign in page.
 
-<!--### Sign in
-- Page features a form for signing in to Garden Diaries.
-- Filling out a valid forms let the user sign in and redirects the user to the home page with a signed in view.
-- Filling out an invalid form notifies the user what changes they need to make.
-- The form is fully responsive to different screen sizes.
-- The form features a link to the sign up page, redirecting users to the sign up page. 
+### Sign in
+- The page displays a simple form where a previously registered user can log into their Iowa Summer Activities account.
+- Filling out a valid forms will allow the user to access the website, where they will be redirected to the homepage.
+- Filling out an invalid form alerts the user of the changes they need to make:
+    - Credentials don't match
+    ![Credentials don't match](images/signin-no-match.png)
+    - Field(s) left blank
+    ![Blank Fields](images/signin-blank-field.png)
+- The form is fully responsive on various screen sizes and includes an image on larger sizes. On smaller devices, the image disappears.
+- A link at the bottom allows users to be redirected to the sign up page if they don't have an existing account.
 
 ### Navigation Bar
+### Non-registered and non logged-in users
+- The navbar is shown with links to the homepage, sign up and sign in pages.
+- All three links redirect the user to the appropriate page, while clicking the site logo redirects them to the homepage.
+- The navbar is responsive and collapses into a hamburger dropdown menu on smaller device screens.
 
-### Non authorized user
-- The navbar features links to the Sign in and Sign up pages.
-- The links redirect the user to the chosen page.
-- The navbar is responsive and collapses to a burger menu on smaller screens. 
+### Registered and logged-in users
+- When the user is logged into their account, the navigation bar includes the pages: 'Create an Event', 'Feed', 'Liked', 'Contact DSM', 'Reviews', 'Sign out' and 'Profile'. 
+- The profile page includes the user's avatar image (or a default image). Clicking the avatar image will redirect the user to their profile page.
+- All links in the navigation have been tested and properly redirect the user to the appropriate page. 
+- The navbar is responsive and collapses into a hamburger dropdown menu on smaller device screens.
 
-### Authorized user
-- When the user is signed in, the navbar features links to `Add a diary entry`, `Shoppinglist`, `To-do list`, `My plants`, `Following`, `Liked entries` and `Sign out`, as well as the users avatar profile image and username, linking to the users profile page.
-- All links redirect the user to the chosen page. 
-- The navbar is responsive and collapses to a burger menu on smaller screens. 
+## Homepage 
+## Create an Event
+- By clicking the 'Create an event' icon next to the site logo, the user can access the form to create an event. This link is present in the navbar on all pages. On smaller device screens it appears alone between the site icon and the hamburger dropdown menu.
+- The form features three fields: a mandatory title, an optional description and a mandatory image upload. Not filling out one of the mandatory fields will alert the user or an error and ask them to rectify it. 
+- Once an image has been loaded, a 'change the image' button will appear, allowing the user to click and select a different image to display.
+- Once the 'create' button is clicked, the form is submitted, the data is saved to the backend API and the event appears on the frontend website.
+- Clicking the cancel button will send no information to the backend API and the user will be redirected to page they were previously on.
 
-## Home page 
+## Edit an event
+- Users can edit only events they've created.
+- The form is pre-populated with the information from the original post.
+- The user can choose to change the title, description and/or image. The image section is optional, while the other two fields are mandatory.
+- When the 'save' button is clicked, the information is updated, both in the backend API and on the frontend website.
+- Clicking the cancel button will send no information to the backend API and the user will be redirected to page they were previously on.
 
-### Popular profiles
-- Avatar and username of users with the most followers are displayed on the home page, followed page, liked entries page and profile page.
-- A `Follow`/`Unfollow` button is displayed next to the avatar and username, to signed in users.
-- The `Follow`/`Unfollow` button is hidden from non authorized users.
-- When clicked, the `Follow`/`Unfollow` button changes dynamically.
-- When clicked, the `Follow`/`Unfollow` button updates the follow and following count of both users. 
-- The component collapse and display the mobile version on smaller screens. 
+## Liked
+- Clicking the heart icon on an event will color the heart red and the number of 'likes' will increase by one, both in the backend API and on the frontend website.
+- Users cannot 'like' posts for which they are the authors.
+- Clicking the filled-in red heart for a post a user has 'liked' will 'unlike' that post and subtract one number from the number of likes that post has, both in the backend API and the frontend website.
 
-### Post feed
-- Diary posts made by all users are displayed on the home page, sorted by latest creation date. 
-- The feed features infinite scrolling, letting the user continue to scroll through content as long as there is any. 
+## Contact
+- All fields of the contact page are mandatory. Leaving any field blank will result in an error message for the user.
+- The email field requires a valid email address (eg: including an @ symbol)
+- If the user intends to send the contact form with any fields blank or invalid, an error message will be shown.
+- Once successfully sent, a message will be displayed to the user thanking them for their correspondence. This message does not go to any real email account and is only visible from the backend 'Contact' section as a logged in admin superuser.
+- There is no way to 'unsend' a contact message. 
 
-## Add a diary entry
-- The user can access the form to post a diary entry through the link in the navbar.
-- The form features image upload functionality. The image upload field lets the user upload an image.
-- When an image have been added the the image upload field a button is displayed, letting the user reupload a different image if they want to change it.
-- The Title field lets the user add a title to the post.
-- The Notes field lets the user add a text to the post.
-- The form feature a post and cancel button.
-- When the Post button is clicked the form is submitted and the data saved to the api backend. 
-- When the Cancel button is clicked the user is redirected to the previous page.
-
-## Edit a diary entry 
-- When clicking the edit icon in the post page dropdown menu the user is redirected to the post edit page.
-- The form is prepopulated with the data from the original post.
-- The form lets the user upload a different image. 
-- The form lets the user edit the title and text fields.
-- The edit form feature a save updates and cancel button.
-- When submitted by clicking the save updated button, the post data is sent to the backend API and updated.
-- When clicking the cancel button the user is redirected back to the post page. 
+## Reviews 
+- Users cannot review events for which they are the owner.
+- Users cannot review events more than once.
+- Users can edit their review comment and save that information. To change the star-review, they will have to delete their review entirely and start again.
 
 ## Profile
-- The user can access their own profile by clicking on their own avatar or username in the navbar, or wherever it's displayed on the website.
-- Users can access other users profile by clicking on the avatar or username in the navbar, or wherever it's displayed on the website.
-- The profile page display the amount of followers, following and posts.
-- The profile page display a dropdown menu, redirecting the user to the username edit, password edit or profile edit page, accessible to the profile owner. 
-- The profile page display all the posts by the user, sorted by latest created at the top. 
-- The profile post feed features infinite scrolling, letting the user continue to scroll through content as long as there is any.
+- The user can access their own profile by clicking their avatar image or 'Profile' in the navbar or wherever the avatar is shown on the website. 
+- Users can see others' profile pages by clicking their avatars. Doing this will take the user to the other person's page where you can see all events they've created.
+- The profile page shows the number of posts created, followers and users following.
+- A user's own profile includes an arrow dropdown menu that has clickable icons to edit the profile, change the username or the password and, if clicked, will redirect the user to these pages.
+- The profile page includes an 'infinite scroll' feature which will allow the user to scroll through content as long as there is any.
 
 ## Edit profile
-- The profile page display a dropdown menu, redirecting the user to the username edit, password edit or profile edit page, accessible to the profile owner.
-- The Edit profile link redirects the user to the edit profile form, where the user can update their bio and upload a profile image.
-    - Submitting the bio and image form the data is sent and updated in the API.
-    - Clicking the cancel button redirects the user back to the previous page.
-- The Change username link redirects the user to the edit username form, prepopulated with the users username. 
-    - Empty edit username form can't be submitted.
-    - User can't change to a username that already exist, and are notified if they try to submit an invalid form.
-    - Clicking the cancel button redirects the user back to the previous page.
-- The change password link redirects the user to the edit password form.
-    - Empty edit password form can't be submitted.
-    - User cant submit an invalid password, and is notified with a message if they try. 
-    - Clicking the cancel button redirects the user back to the previous page.
-    
-## Searchbar
-- A searchbar is featured on the home page, `Shoppinglist`, `To-do list`, `My plants`, `Following`, `Liked entries` and `Profile page`.
-- The searchbar on each page lets the user query for posts relevant to the specific page.
-- If no matching query is found the page displays a message and image from the Asset component to inform the user of this. 
+- Once the user is on their profile page, clickng the arrow dropdown menu will allow them to select to edit their profile or change their username or password. This page is accessible only to each owner, meaning a user cannot edit another users information, barring admin superusers from the backend. There is one superuser created for this site.
+- Clicking the edit profile link redirects the user to edit their own profile. There they can change the avatar image and their short bio. Save this information will save the changes to the backend API and to the frontend website. Cancelling these changes will redirect the user to the page they were previously on. 
+- Clicking to change the username redirects the user to that page where they will choose a different username that will appear, both in the backend API and on the frontend website page to other users. Clicking the cancel button will return them to the page they were previously on. Empty unsername fields cannot be saved on the form nor can a user choose a username that already exists. 
+- Clicking to change the password redirects the user to be able to edit their password information. Like the username change form, empty fields cannot be submitted, nor can users choose an invalid password. Clicking 'cancel' redirects them to the page they were previously on.
 
-## Commentfield
-- The post detail page feature a commentfield. 
-- The commentfield feature a submit button. 
-- When submitted the new comment is saved to the backend API and displayed underneath the commentfield. 
-- Empty commentfields can not be submitted.
-- When a comment is posted the comment count on the post is increased.
-- When a comment is deleted the comment count on the post is decreased.
-- When posted, owner can access the dropdown menu to edit or delete a comment.
-- When the delete icon is clicked the comment post is deleted both on the website and in the database.
-- When the edit icon is clicked the comment edit field is displayed, prepopulated with the comment text. 
-- When the edit field is submitted, the post is updated and saved to the API.
-- When the cancel button in the edit field is clicked the comment edit field is closed and no changes are made to the API data.
+## Most Followed Profiles
+- The 'Most Followed Profiles' section is always displayed, regardless of the user's login status. The 'follow / unfollow' buttons are present only for logged-in users and only on larger screens. To (un)follow a user on a smaller device, a logged-in user must click the other user's profile avatar.
+- The avatar and username of each user with the most followers are displayed on the home, feed, liked, reviews and profile pages.
+- A 'Follow' button is displayed next to each avatar, barring the user's own avatar, should they fall within the 'most followed profiles' category. The follow button, once clicked, will change to an 'Unfollow' option if the user wants to unfollow another.  
+- When clicked, the 'Follow / Unfollow' button updates the follow and following count of both users and changes color.
+- The component collapse and display the mobile version on smaller screens. 
 
-## Following
-- Diary posts made by users that are followed by the signed in user displayed on the Followed page, sorted by latest creation date. 
-- The feed features infinite scrolling, letting the user continue to scroll through content as long as there is any.
-- A `Follow`/`Unfollow` button is displayed next to the avatar and username on the profile page and in the popular profiles component, available to signed in users.
-- The `Follow`/`Unfollow` button is hidden from non authorized users.
-- When clicked, the `Follow`/`Unfollow` button changes dynamically.
-- When clicked, the `Follow`/`Unfollow` button updates the follow and following count of both users.
-
-## Liked entries
-- Diary posts liked by the signed in user is displayed on the Liked entries page, sorted by latest creation date.
-- The feed features infinite scrolling, letting the user continue to scroll through content as long as there is any.
-- If the user unlikes a post it is removed from the Liked entries page.
-
-
-
-
-
-## Asset component
-- The asset spinner is displaying when loading data from the API on all pages where it's been imported.
-- The asset message is displaying as expected on all pages where it's been imported.
-- The asset image is displaying as expected on all pages where it's been imported.
+## Asset Component
+- The asset spinner displayes when data is loading on the frontend website from the backend API on all pages it's been imported on. 
 
 ## Hooks
 
-### Use click outside hook
-- The use click outside hook let the user close the navbar hamburger menu when clicking outside of it. 
+### Use Click Outside Toggle
+- Hook that allows the user to close the hamburger navbar by clicking anywhere outside of it.
 
-### Use redirect hook
-- The use redirect hook redirects the user as expected where used.
-
+### Use Redirect
+- Hook that redirects the user to the appropriate page where this hook is implemented. 
 
 ## Peer Review
 I personally tested this application in Chrome, Safari and Firefox on laptop and mobile devices. The website worked well with no issues that I noted. 
 
 Additionally, I had peers and family members, both within the tech community and outside of it, text the website for useability. Their response was positive and they found no issues with the platform.
+ 
+## Identified Bugs
+## Solved
+- BUG: The 'Back to Top' feature was giving an error, but only on some occasions. It seemed irrelevant whether the user was logged in or not. Given that I realized this bug at the end of development and was unable to fix the error in my code properly, I chose to remove the feature entirely for this deployment. Given that it doesn't affect the functionaly of my application, I thought this was the best decision. 
 
-<!-- ## Known Bugs
+    - FIX:  Remove the code for this feature entirely. Now there is no error.
 
-Discuss bugs -->
+###
+- BUG: The correct avatar image does not appear when editing a review. The image is an error, as if it didn't exist.
+
+    - FIX: I went to tutoring for help on this. Jason was helpful in working through the code with me, identifying exactly _where_ my variables were coming from and _what_ I was calling them. In the end, it was my serializers.py file that had a typo (profile_profile_image, rather than profile_image). Once this was corrected and redeployed, everything worked well. 
+        <details><summary>Bug and fix images</summary>
+
+        ![Review-bug](images/review-image-bug.png)
+        ![Review-image fix](images/review-image-fix.png)
+        ![Review-image fix 2](images/review-image-fix2.png)
+        </details><br/> 
+
+###
+- BUG: I was unable to properly delete a review. I solved this by following, almost to the letter, the same logic I used for the 'delete comment' section. This worked.
+
+    - FIX: Follow same logic as the 'delete comment' section and adapt it to the reviews section.
+
+###
+- BUG: I was able to post more than one review. 
+
+    - FIX: I spoke with tutoring again for the solution to this issue. I had inadvertently put my code into the post serializer rather than the review serializer. Given that I was reviewing a post, I thought this was appropriate. Tutoring helped me realize my mistake in logic and helped solve the problem by defining the variable properly. 
+
+## Unsolved
+- BUG: If a user reviews an event the page doesn't automatically refresh. If the user clicks to review the same event again, a new review form will pop up. They can fill it out but won't be able to post it. Ideally, the user should be unable to click this button again and see the form for a second time for the same event if they've already posted a review. This is the case if the page is refreshed.
+
+- BUG: This website was tested on various browsers, Safari being one of them. However, this application does not work properly on Safari. Users are able to scroll through events on the homepage as unregistered, logged-out users but once they attempt to create a user or log into their account, the page refreshes and they're redirected to the sign in page. If they choose to create a new user, the same happens, they're retunred to the sign up page, though a user has been created (seen from the admin superuser from the backend and on the frontend for other users able to log in). If this application reaches real-world use, this will of course be something to address, given the multitude of Apple users.
+
+- BUG: This application works well on various browsers and was built using Chrome exclusively. However, during the testing process, I tried to log into my account through the Chrome 'incognito' window and was unable to. The result is the same as is mentioned above with Safari.
+    <details><summary>Chrome incognito bug</summary>
+
+    ![Chrome incognito bug](images/incognito-bug.png)
+    </details><br/>
+
+
+
+
