@@ -7,12 +7,12 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 import { axiosRes } from "../../api/axiosDefaults";
-import {
-  useCurrentUser,
-  useSetCurrentUser,
-} from "../../contexts/CurrentUserContext";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";

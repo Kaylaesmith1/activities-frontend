@@ -12,7 +12,9 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { useHistory, useParams } from "react-router";
+import { useParams } from "react-router";
+import { useHistory } from "react-router";
+
 import { axiosReq } from "../../api/axiosDefaults";
 
 function PostEditForm() {

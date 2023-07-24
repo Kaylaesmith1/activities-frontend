@@ -45,7 +45,7 @@ Files were also manually run through [JS Hint](https://jshint.com/). Though no e
 
 Lighthouse testing was performed through the Google Chrome Developer Tools was used to test the application's *Performance*, *Accessibility*, *Best Practices* and *SEO* as a logged-in user on a desktop device. 
 
-The performace score was rather poor, due to the inclusion of images for avatars, posted events and in other areas. This score could be improved in future iterations by compressing the images before uploading them.
+The performace score was rather poor, I believe due to the inclusion of images for avatars, posted events and in other areas. This score could be improved in future iterations by compressing the images before uploading them.
 
 <details><summary>Lighthouse Score</summary>
 

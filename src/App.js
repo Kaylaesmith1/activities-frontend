@@ -12,16 +12,15 @@ import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import ProfilePage from "./pages/profiles/ProfilePage";
 
-// REMOVE REVIEWS THINGS
 import ReviewsPage from './pages/reviews/ReviewsPage';
 
 import ContactForm from './pages/contact/ContactForm';
 import Confirmation from './pages/contact/Confirmation';
 
-
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import NotFound from "./components/NotFound";
 
 
 
@@ -74,7 +73,7 @@ function App() {
               <Route exact path="/confirmation" render={() => <Confirmation />} />
 
               
-              <Route render={() => <p>Page not found!</p>} />
+              <Route render={() => <NotFound />} />
             </Switch>
           </Container>
         </div>

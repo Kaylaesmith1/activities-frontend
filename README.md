@@ -1,12 +1,12 @@
 # **Iowa Summer Activities**
 
-The Iowa Summer Activities website was created to be a hub of information for people in the Des Moines (Iowa) area to checkout all types of summer activities. The city itself generally has a good handle on diseminating information about specific events but I wanted to incorporate general venues and activities into this sight that may not have a specific event date or time.
+The Iowa Summer Activities website was created to be a hub of information for people in the Des Moines (Iowa) area to checkout all types of summer activities. The city itself generally has a good handle on disseminating information about specific events but I wanted to incorporate general venues and activities into this site that may not have a specific event date or time.
 
-As such, visitors and residents alike can enjoy the number of activities and outdoor events that Des Moines has to offer, whether they're life-long Iowans or just visiting for a few days. This website will hopefully enable neighbors to connect with each other through similar interests while enjoying the hustle and bustle (or tranquility, depending on the activity) of the city in Summer.
+As such, visitors and residents alike can enjoy the number of activities and outdoor events that Des Moines has to offer, whether they're life-long Iowans or just visiting for a few days. This website will hopefully enable neighbors to connect with each other through similar interests while enjoying the hustle and bustle (or tranquility, depending on the activity) of the city in summer.
 
 Through the platform, registered, logged-in users can create events and upload information about them. Users can also create a profile and like and comment on others' posts, leave a review of an event and follow other users.
 
-Though it could have a place in a real-world setting, this website was created for Portfolio Project 5 (Advanced Front End) as part of the Diploma in Full Stack Software Development program through [Code Institute](https://www.codeinstitute.net). Iowa Summer Activities is ficticious and does not provide veritable information for events happening in Iowa.
+Though it could have a place in a real-world setting, this website was created for Portfolio Project 5 (Advanced Front End) as part of the Diploma in Full Stack Software Development program through [Code Institute](https://www.codeinstitute.net). Iowa Summer Activities is ficticious and might not provide veritable information for events happening in Iowa.
 
 Take a look at the live website [here](https://activities-frontend-6f71eff2ee1a.herokuapp.com/).
 
@@ -48,13 +48,13 @@ Take a look at the live website [here](https://activities-frontend-6f71eff2ee1a.
 
 The objective of this project was to create a web application where people can share information about activities and events happening in the Des Moines, Iowa area. The application could also serve as a way to meet new people within the community, while participating in local events.
 
-Given the various attractions Iowa has to offer, this application not only enables neighbors to participate in specific events, they can also glean information on state parks and other sites of interest that aren't happening at a specific time. Through this platform, users can view a list of events, create their own, edit or delete it and comment on and review other posts. Users can also filter the content through keyword or post author and follow other users.
+Given the various attractions Iowa has to offer, this application not only enables neighbors to participate in specific events, they can also glean information on state parks and other sites of interest that aren't happening at a specific time. Through this platform, users can view a list of events, create their own, edit or delete an activity and comment on and review other posts. Users can also filter the content through keyword or post author and follow other users.
 
 ## Site User's Goal
 
 People using this application are generally either interested in gaining information about events happening in the area or wanting to post information about an activity. As previously mentioned, however, users will also be able to find non-specific activities like campsite, state parks, nature reserves, etc. This is a platform that can include any type of activity, whether it's a specific planned event or just something 'fun' to check out in Des Moines or in Iowa. 
 
-Once users participate in an activity or travel to a place, they leave a review comment and 0-5 star review. Users can also leave comments on posts for activities and events, 'like' (and 'unlike') activities and follow users they're interested in. Users are unable to review activities, like or leave comments on posts for which they are the author.
+Once users participate in an activity or travel to a place, they leave a review comment and 0-5 star review. Users can also leave comments on posts for activities and events, 'like' (and 'unlike') activities and follow users they're interested in. Users are unable to review activities or like posts for which they are the author.
 
 
 ## Site Owner's Goal
@@ -69,7 +69,7 @@ Once starting the development process of this application, I realized that this 
 
 ### GitHub Project Board
 
-Before starting the frontend of this project, I thought about EPICs and user stories I wanted to include for a good user experience for visitors to this platform. I started by reviewing what I'd created for the [backend project board](https://github.com/users/Kaylaesmith1/projects/3/views/1) for the backend API, which included various user stories for each app created. Since most features were already covered from the backend, I focused my EPICs on then avigation bar and homepage, adding a couple user stories to EPICs for three apps: Following, Profiles, and Comments. 
+Before starting the frontend of this project, I thought about EPICs and user stories I wanted to include for a good user experience for visitors to this platform. I started by reviewing what I'd created for the [backend project board](https://github.com/users/Kaylaesmith1/projects/3/views/1) for the backend API, which included various user stories for each app created. Since most features were already covered from the backend, I focused my EPICs on the navigation bar and homepage, adding a couple user stories to EPICs for three apps: Following, Profiles, and Comments. 
 
 Similarly, on the frontend project board, each user story belongs to an EPIC and I prioritized them using the MoSCoW method.
 
@@ -86,7 +86,7 @@ Similarly, on the frontend project board, each user story belongs to an EPIC and
 
 The wireframes for the project were created using [Figma](https://www.figma.com/). Wireframes have been created and included for both desktop and mobile devices. The application itself is responsive for desktop, tablet and mobile-sized devices. 
 
-The layout closely follows the Moments walkthrough project, including a navigation bar with registration and login features, the activities section in the middle as posted events and on the right, on a desktop device, a list of most followed profiles. On smaller devices, the navbar becomes a hamburger menu, the most follow profiles move to the top of the page and the events are underneath. This layout was chosen for ease and because the information translates well through various device sizes. I found this layout easy to navigate from my desktop, laptop and mobile.
+The layout closely follows the Moments walkthrough project, including a navigation bar with registration and login features, the activities section in the middle as posted events and on the right, on a desktop device, a list of most followed profiles. On smaller devices, the navbar becomes a hamburger menu, the most followed profiles move to the top of the page and the events are underneath. This layout was chosen for ease and because the information translates well through various device sizes. I found this layout easy to navigate from my desktop, laptop and mobile.
 
 <details><summary><b>Wireframes</b></summary>
 
@@ -155,8 +155,7 @@ As the developer I can create a followers section so that registered, logged in 
 
 ## Site Structure
 
- The Iowa Summer Activities website is interactive, both for non registered, non logged-in users and for users signed into their account. Depending on the login status, some pages may not be visible to the user. When a user is not logged into their account, they see the home page, the sign in page and the sign up page in the navigation bar. . Onces logged in
-  is split up in two parts: when the user is logged out and when the user is logged in. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available.
+ The Iowa Summer Activities website is interactive, both for non registered, non logged-in users and for users signed into their account. Depending on login status different pages are available for the user. When the user is logged out the pages: Home, and Sign In or Up are available from the Navigation Bar menu. When the user is logged in Feed, My Events, Reviews, Signout and Profile Page also become available.
 
 ## Design Choices
 

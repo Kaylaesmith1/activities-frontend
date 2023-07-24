@@ -11,7 +11,8 @@ import Alert from "react-bootstrap/Alert";
 
 import { axiosReq } from "../../api/axiosDefaults";
 
-import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useProfileData } from "../../contexts/ProfileDataContext";
 
 import btnStyles from "../../styles/Button.module.css";

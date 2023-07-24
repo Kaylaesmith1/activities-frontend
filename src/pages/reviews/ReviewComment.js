@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import styles from "../../styles/Comment.module.css";
 import Avatar from '../../components/Avatar';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';

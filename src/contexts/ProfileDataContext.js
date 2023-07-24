@@ -1,5 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { axiosReq, axiosRes } from "../api/axiosDefaults";
+import { useContext } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { createContext} from "react";
+
+import { axiosRes } from "../api/axiosDefaults";
+import { axiosReq } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { followHelper } from "../utils/utils";
 import { unfollowHelper } from "../utils/utils";
